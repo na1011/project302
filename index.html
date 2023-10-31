@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-
+<html lang="ko">
 <head>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8" />
@@ -27,58 +26,32 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        @media (min-width:992px) {
-        .col-lg-4 {
-            flex: 0 0 auto;
-            width: 22.5%
+        .single-grid .img {
+            position: absolute;
+            width:300px;
+            height:250px;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
         }
-        .col-lg-3 {
-            flex: 0 0 auto;
-            width: 10%;
+
+        .single-grid .img:first-child {
+            /* display: block; */
+            opacity: 1;
         }
-        .col-lg-13 {
-        flex: 0 0 auto;
-        width: 33.33333333%;
-    }
-    }
-        .img {
-      position: absolute;
-      width:300px;
-      height:250px;
-      -webkit-transition: opacity 1s ease-in-out;
-      -moz-transition: opacity 1s ease-in-out;
-      -o-transition: opacity 1s ease-in-out;
-      transition: opacity 1s ease-in-out;
-      opacity: 0;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      filter: alpha(opacity=0);
-    }
 
-    .img:first-child {
-      /* display: block; */
-      opacity: 1;
-    }
-    .items-grid .single-grid .image .author::before {
-        height: 0;
-    }
-    
-
-    div {
-      margin: 5px 0px
-    }
+        .items-grid .single-grid .image .author::before {
+            height: 0;
+        }
     </style>
    
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">
@@ -156,20 +129,21 @@
                         <!-- Start Search Form -->
                         <div class="search-form wow fadeInUp" data-wow-delay=".7s">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12 p-0">
-                                    <div class="search-input">
-                                        <input type="date" name="keyword" id="keyword" style="padding: 0 25px;">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                <div class="col-lg-3 col-md-3 col-12 p-0">
                                     <div class="search-input">
                                         <input type="date" name="keyword" id="keyword" style="padding: 0 25px;">
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-12 p-0">
                                     <div class="search-input">
+                                        <input type="date" name="keyword" id="keyword" style="padding: 0 25px;">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-12 p-0">
+                                    <div class="search-input">
                                         <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
                                         <select name="category" id="category">
+                                            <option value="none" selected disabled>인원</option>
                                             <option value="none">1</option>
                                             <option value="none">2</option>
                                             <option value="none">3</option>
@@ -177,10 +151,11 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                <div class="col-lg-2 col-md-2 col-12 p-0">
                                     <div class="search-input">
                                         <label for="location"><i class="lni lni-map-marker theme-color"></i></label>
-                                        <select name="location" id="location">
+                                        <input type="text" id="location" placeholder="지역명">
+                                        <!-- <select name="location" id="location">
                                             <option value="none" selected disabled>지역</option>
                                             <option value="none">가</option>
                                             <option value="none">나</option>
@@ -188,11 +163,11 @@
                                             <option value="none">라</option>
                                             <option value="none">마</option>
                                             <option value="none">바</option>
-                                        </select>
+                                        </select> -->
                                     </div>
                                 </div>
                                 
-                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                <div class="col-lg-2 col-md-2 col-12 p-0">
                                     <div class="search-btn button">
                                         <button class="btn"><i class="lni lni-search-alt"></i> Going</button>
                                     </div>
@@ -228,7 +203,7 @@
         <div class="container">
             <div class="single-head">
                 <div class="row" style="margin-top: 50px;">
-                    <div class="col-lg-13 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-4 col-12">
                         <!-- Start Single Grid -->
                         <h3>주목할 상품</h3>
                         <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
@@ -275,7 +250,7 @@
                         </div>
                         <!-- End Single Grid -->
                     </div>
-                    <div class="col-lg-13 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-4 col-12">
                         <!-- Start Single Grid -->
                         <h3>특가 상품</h3>
                         <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
@@ -322,7 +297,7 @@
                         </div>
                         <!-- End Single Grid -->
                     </div>
-                    <div class="col-lg-13 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-4 col-12">
                         <!-- Start Single Grid -->
                         <h3>테마 여행</h3>
                         <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
@@ -391,11 +366,11 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-right: 20px;">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <!-- Single Widget -->
                         <div class="single-footer mobile-app">
                             <!-- <h3>Mobile Apps</h3> -->
-                            <img class="footer-logo" style="width: 120px;" src="./assets/images/footerlogo.png">
+                            <img class="footer-logo" style="width: 140px;" src="./assets/images/footerlogo.png">
                             <div class="single-footer f-contact">
                                 <ul>
                                     <li>(주)GOING | 대표이사 : 김고잉<br><br>사업자 등록번호 : 000-00-000000 <br> 통신판매업신고 : 고잉-0000호 <br> 관광사업자 등록번호 : 제2022-05호 </li>
@@ -407,11 +382,11 @@
                         <!-- End Single Widget -->
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-left: 20px;">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <!-- Single Widget -->
-                        <div class="single-footer f-link" >
-                            <h3>바로가기</h3>
-                            <ul>
+                        <div class="single-footer f-link">
+                            <h3 style="font-size: 23px;">바로가기</h3>
+                            <ul style="padding-left: 15px;">
                                 <li><a href="javascript:void(0)">여행지 검색</a></li>
                                 <li><a href="javascript:void(0)">예약 관리</a></li>
                                 <li><a href="javascript:void(0)">장바구니</a></li>
@@ -421,11 +396,11 @@
                         </div>
                         <!-- End Single Widget -->
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%;">
+                    <div class="col-lg-5 col-md-6 col-12">
                         <!-- Single Widget -->
-                        <div class="single-footer f-contact" >
-                            <h3>Contact</h3>
-                            <ul>
+                        <div class="single-footer f-contact">
+                            <h3 style="font-size: 23px;">Contact Us</h3>
+                            <ul style="padding-left: 15px;">
                                 <li>(주)GOING은 통신판매 중개자로서 통신판매의 당사자가 아니며 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
                                 <li>Tel. 1234-5678 <br> Mail. going@going.com <br> addr. 서울특별시 종로구 종로78 미려빌딩 3층</li>
                             </ul>
@@ -436,7 +411,6 @@
             </div>
         </div>
         <!--/ End Footer Middle -->
-        
     </footer>
     <!--/ End Footer Area -->
 
