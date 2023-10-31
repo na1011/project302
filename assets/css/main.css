@@ -3474,7 +3474,7 @@ blockquote .shape {
 }
 
 .categories .cat-inner {
-  padding: 30px 40px;
+  padding: 30px 40px 0 40px;
   border: 1px solid #eee;
   border-radius: 6px;
   position: relative;
@@ -4017,7 +4017,7 @@ blockquote .shape {
 }
 
 .items-grid .single-grid .content .top-content {
-  padding: 30px 30px 25px 30px;
+  padding: 0px 30px 25px 30px;
 }
 
 .items-grid .single-grid .content .top-content .tag {
