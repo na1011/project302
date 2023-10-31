@@ -1,6 +1,52 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰 작성</title>
+    <style>
+        .star-ratings {
+            color: #aaa9a9;
+            position: relative;
+            unicode-bidi: bidi-override;
+            width: max-content;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1.3px;
+            -webkit-text-stroke-color: #2b2a29;
+        }
+       .star-ratings-fill {
+        color: #fff58C;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        -webkit-text-fill-color: gold;
+       }
+       .star-ratings-base {
+        z-index: 0;
+        padding: 0;
+       }
+    </style>
+</head>
 <body>
-    sdsadadasd
+    <div class="star-ratings">
+        <div class="star-ratings-fill space-x-2 text-lg"
+        :style="{ width: ratingToPercent + '%'} "
+        >
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="star-ratings-base space-x-2 text-lg">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+    </div>
 </body>
+<script>
+    ratingToPercent() 
+        const socre = +this.restaurant.averageScore * 20 ;
+        return socre + 1.5 ;
+       
+</script>
 </html>
