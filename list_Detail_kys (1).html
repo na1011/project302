@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8" />
@@ -54,6 +54,63 @@
 
         .t-prev:hover , .t-next:hover {
             background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
         }
     </style>
 
@@ -175,34 +232,49 @@
                     </div>
 
                     <div class="col-lg-6 col-md-12 col-12">
-                        <div class="product-info">
-                            <h2 class="title">여행상품 이름</h2>
-                            <p class="location"><i class="lni lni-map-marker"></i><a href="javascript:void(0)">여행지, 국가이름</a></p>
-                            <h3 class="price">$999</h3>
-                            <div class="list-info">
-                                <h4>여행일정</h4>
-                                <ul>
-                                    <li><span>1day :</span>데카포 별빛투어+야간 온천</li>
-                                    <li><span>2day :</span>마운트쿡 국립공원 자유시간</li>
-                                    <li><span>3day :</span>시티 워킹투어 2회</li>
-                                    <li><span>4day :</span>호주+퀸스타운 2박 특급호텔</li>
-                                </ul>
-                            </div>
-                            <div class="contact-info">
-                                <ul>
-                                    <li style="left: 0px;">
-                                        <a href="#" class="mail">
-                                            <i class="lni lni-heart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:example@gmail.com" class="mail">
-                                            <i class="lni lni-envelope"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="container">
+                            <h1>상품등록</h1>
+                            <form action="상품_등록_처리" method="post" enctype="multipart/form-data">
+                                <label for="product_code">상품코드:</label>
+                                <input type="text" id="product_code" name="product_code" required>
+                    
+                                <label for="product_name">상품명:</label>
+                                <input type="text" id="product_name" name="product_name" required>
 
+                                <label for="location">위치:</label>
+                                <input type="text" id="location" name="location" required>
+                                
+                                <label for="destination">여행지:</label>
+                                <input type="text" id="destination" name="destination" required>
+    
+                    
+                                <label for="description">상품 설명:</label>
+                                <textarea id="description" name="description" required></textarea>
+                    
+                                <label for="product_image">상품 이미지:</label>
+                                <input type="file" id="product_image" name="product_image" accept="image/*" required>
+                                
+                                <div class="inputArea"> 
+                                     <label for="product_price">상품 가격:</label>
+                                     <label>성인</label>
+                                     <select class="category1">
+                                      <option value="">1</option>
+                                      <option value="">2</option>
+                                      <option value="">3</option>
+                                      <option value="">4</option>
+                                      <option value="">5</option>
+                                      <option value="">6</option>
+                                      <option value="">7</option>
+                                      <option value="">8</option>
+                                      <option value="">9</option>
+                                      <option value="">10</option>
+                                     </select>
+                                </div>    
+                                
+                                <div class="btn-container">
+                                    <button class="btn" type="submit">등록</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -348,12 +420,12 @@
                         <div class="single-block tags">
                             <h3>Tags</h3>
                             <ul>
-                                <li><a href="javascript:void(0)">#크라운 플라자</a></li>
-                                <li><a href="javascript:void(0)">#프리미어</a></li>
-                                <li><a href="javascript:void(0)">#시티뷰</a></li>
+                                <li><a href="javascript:void(0)">#국내여행</a></li>
+                                <li><a href="javascript:void(0)">#해외여행</a></li>
+                                <li><a href="javascript:void(0)">#패키지여행</a></li>
                                 <li><a href="javascript:void(0)">#테마파크</a></li>
                                 <li><a href="javascript:void(0)">#야경투어</a></li>
-                                <li><a href="javascript:void(0)">#스톤마사지</a></li>
+                                <li><a href="javascript:void(0)">#힐링투어</a></li>
                             </ul>
                         </div>
                         <!-- End Single Block -->
@@ -374,75 +446,13 @@
                             <!-- End Single Block -->
                             <!-- Start Single Block -->
                             <div class="single-block contant-seller comment-form ">
-                                <h3>인원 수</h3>
+                                <h3>미제</h3>
                                 <form action="#" method="POST">
                                         <ul class="list">
-                                                <li>
-                                                    <div class="select mt-3">    
-                                                        <span>성인</span>
-                                                        <select id="jq_id_adultCnt" class="jq_cl_personCnt">
-                                                                <option value="1" selected="selected">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                                <option value="6">6</option>
-                                                                <option value="7">7</option>
-                                                                <option value="8">8</option>
-                                                                <option value="9">9</option>
-                                                                <option value="10">10</option>
-                                                                <option value="11">11</option>
-                                                                <option value="12">12</option>
-                                                                <option value="13">13</option>
-                                                                <option value="14">14</option>
-                                                                <option value="15">15</option>
-                                                                <option value="16">16</option>
-                                                                <option value="17">17</option>
-                                                                <option value="18">18</option>
-                                                                <option value="19">19</option>
-                                                                <option value="20">20</option>
-                                                        </select>
-                                                    </div>
-                                                </li>
+                                                
 
-                                                <li>
-                                                    <div class="select mt-3">
-                                                        <span>아동</span>
-                                                        <select id="jq_id_childCnt" class="jq_cl_personCnt">
-                                                                <option value="0">0</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                                <option value="6">6</option>
-                                                                <option value="7">7</option>
-                                                                <option value="8">8</option>
-                                                                <option value="9">9</option>
-                                                                <option value="10">10</option>
-                                                        </select>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <div class="select mt-3">
-                                                        <span>유아</span>
-                                                        <select id="jq_id_infantCnt" class="jq_cl_personCnt">
-                                                                <option value="0">0</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                                <option value="6">6</option>
-                                                                <option value="7">7</option>
-                                                                <option value="8">8</option>
-                                                                <option value="9">9</option>
-                                                                <option value="10">10</option>
-                                                        </select>
-                                                    </div>
-                                                </li>
-                                                <h5 class="mt-4">000,000원</h5>
+                                               
+                                                
                                         </ul>
                                 </form>
                             </div>
@@ -489,7 +499,7 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-right: 20px;">
                         <!-- Single Widget -->
                         <div class="single-footer mobile-app">
                             <!-- <h3>Mobile Apps</h3> -->
@@ -505,9 +515,9 @@
                         <!-- End Single Widget -->
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-left: 20px;">
                         <!-- Single Widget -->
-                        <div class="single-footer f-link">
+                        <div class="single-footer f-link" >
                             <h3 style="font-size: 23px;">바로가기</h3>
                             <ul style="padding-left: 15px;">
                                 <li><a href="javascript:void(0)">여행지 검색</a></li>
@@ -519,9 +529,9 @@
                         </div>
                         <!-- End Single Widget -->
                     </div>
-                    <div class="col-lg-5 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%;">
                         <!-- Single Widget -->
-                        <div class="single-footer f-contact">
+                        <div class="single-footer f-contact" >
                             <h3 style="font-size: 23px;">Contact Us</h3>
                             <ul style="padding-left: 15px;">
                                 <li>(주)GOING은 통신판매 중개자로서 통신판매의 당사자가 아니며 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
