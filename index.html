@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GOING - 여행검색 플랫폼</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Web Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        @media (min-width:992px) {
+        .col-lg-4 {
+            flex: 0 0 auto;
+            width: 22.5%
+        }
+        .col-lg-3 {
+            flex: 0 0 auto;
+            width: 10%;
+        }
+        .col-lg-13 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    }
+        .img {
+      position: absolute;
+      width:300px;
+      height:250px;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+    }
+
+    .img:first-child {
+      /* display: block; */
+      opacity: 1;
+    }
+    .items-grid .single-grid .image .author::before {
+        height: 0;
+    }
+    
+
+    div {
+      margin: 5px 0px
+    }
+    </style>
+   
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/colorlogo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="active" href="./index - 최종본.html" aria-label="Toggle navigation">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" aria-label="Toggle navigation">고객센터</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./MyPage_Home.html" aria-label="Toggle navigation">마이페이지</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            <div class="login-button">
+                                <ul>
+                                    <li>
+                                        <a href="login.html"><i class="lni lni-enter"></i> 로그인</a>
+                                    </li>
+                                    <li>
+                                        <a href="registration.html"><i class="lni lni-user"></i> 회원가입</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button header-button">
+                                <a href="./여행검색페이지.html" class="btn">여행지 검색</a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+     <!-- Start Hero Area -->
+     <section class="hero-area overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                    <div class="hero-text text-center">
+                        <!-- Start Hero Text -->
+                        <div class="section-heading">
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Welcome to GOING</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">세계의 여행지릃 한 곳에!</p>
+                        </div>
+                        <!-- End Search Form -->
+                        <!-- Start Search Form -->
+                        <div class="search-form wow fadeInUp" data-wow-delay=".7s">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                    <div class="search-input">
+                                        <input type="date" name="keyword" id="keyword" style="padding: 0 25px;">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                    <div class="search-input">
+                                        <input type="date" name="keyword" id="keyword" style="padding: 0 25px;">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-12 p-0">
+                                    <div class="search-input">
+                                        <label for="category"><i class="lni lni-grid-alt theme-color"></i></label>
+                                        <select name="category" id="category">
+                                            <option value="none">1</option>
+                                            <option value="none">2</option>
+                                            <option value="none">3</option>
+                                            <option value="none">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                    <div class="search-input">
+                                        <label for="location"><i class="lni lni-map-marker theme-color"></i></label>
+                                        <select name="location" id="location">
+                                            <option value="none" selected disabled>지역</option>
+                                            <option value="none">가</option>
+                                            <option value="none">나</option>
+                                            <option value="none">다</option>
+                                            <option value="none">라</option>
+                                            <option value="none">마</option>
+                                            <option value="none">바</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4 col-md-4 col-12 p-0">
+                                    <div class="search-btn button">
+                                        <button class="btn"><i class="lni lni-search-alt"></i> Going</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Search Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Area -->
+
+    <!-- Start Categories Area -->
+    <section class="categories">
+        <div class="container">
+            <div class="cat-inner">
+                <div class="row">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">주목할 여행지</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+                                Ipsum available, but the majority have suffered alteration in some form.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Categories Area -->
+
+     <!-- Start Items Grid Area -->
+     <section class="items-grid section custom-padding">
+        <div class="container">
+            <div class="single-head">
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-lg-13 col-md-6 col-12">
+                        <!-- Start Single Grid -->
+                        <h3>주목할 상품</h3>
+                        <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
+                            <div id=wrap class="image">
+                                <div class=imgBox1 style="width:300px;height:300px;">
+                                  <img class="img on" src="https://images.unsplash.com/photo-1556034910-07855ebf6606?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                  <img class="img" src="https://images.unsplash.com/photo-1556241298-fce5ee86ea48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                  <img class="img" src="https://images.unsplash.com/photo-1556032743-3a694170ef94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                </div>
+                                <div class="author">
+                                    <a href="#">
+                                        <button class="sale prev1" style="font-size: 1.2em;">&lt;</button>
+                                    </a>
+                                    <a href="#" style="float: right;">
+                                        <button class="sale next1" style="font-size: 1.2em;">&gt;</button>
+                                    </a>
+                                </div>
+                              </div>
+                            <div class="content">
+                                <div class="top-content">
+                                    <a href="javascript:void(0)" class="tag">정보</a>
+                                    <h3 class="title">
+                                        <a href="item-details.html">정보</a>
+                                    </h3>
+                                    <p class="update-time">정보</p>
+                                    <ul class="rating">
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><a href="javascript:void(0)">별점</a></li>
+                                    </ul>
+                                    <ul class="info-list">
+                                        <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> 지역</a></li>
+                                        <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> 시간</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-content">
+                                    <p class="price">Start From: <span>가격</span></p>
+                                    <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Grid -->
+                    </div>
+                    <div class="col-lg-13 col-md-6 col-12">
+                        <!-- Start Single Grid -->
+                        <h3>특가 상품</h3>
+                        <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
+                            <div id=wrap class="image">
+                                <div class=imgBox2 style="width:300px;height:300px;">
+                                  <img class="img on" src="https://images.unsplash.com/photo-1556034910-07855ebf6606?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                  <img class="img" src="https://images.unsplash.com/photo-1556241298-fce5ee86ea48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                  <img class="img" src="https://images.unsplash.com/photo-1556032743-3a694170ef94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                </div>
+                                <div class="author">
+                                    <a href="#">
+                                        <button class="sale prev2" style="font-size: 1.2em;">&lt;</button>
+                                    </a>
+                                    <a href="#" style="float: right;">
+                                        <button class="sale next2" style="font-size: 1.2em;">&gt;</button>
+                                    </a>
+                                </div>
+                              </div>
+                            <div class="content">
+                                <div class="top-content">
+                                    <a href="javascript:void(0)" class="tag">정보</a>
+                                    <h3 class="title">
+                                        <a href="item-details.html">정보</a>
+                                    </h3>
+                                    <p class="update-time">정보</p>
+                                    <ul class="rating">
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><a href="javascript:void(0)">별점</a></li>
+                                    </ul>
+                                    <ul class="info-list">
+                                        <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> 지역</a></li>
+                                        <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> 시간</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-content">
+                                    <p class="price">Start From: <span>가격</span></p>
+                                    <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Grid -->
+                    </div>
+                    <div class="col-lg-13 col-md-6 col-12">
+                        <!-- Start Single Grid -->
+                        <h3>테마 여행</h3>
+                        <div class="single-grid wow fadeInUp" data-wow-delay=".2s">
+                            <div id=wrap class="image">
+                                <div class=imgBox3 style="width:300px;height:300px;">
+                                  <img class="img on" src="https://images.unsplash.com/photo-1556034910-07855ebf6606?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                  <img class="img" src="https://images.unsplash.com/photo-1556241298-fce5ee86ea48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                  <img class="img" src="https://images.unsplash.com/photo-1556032743-3a694170ef94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                                </div>
+                                <div class="author">
+                                    <a href="#">
+                                        <button class="sale prev3" style="font-size: 1.2em;">&lt;</button>
+                                    </a>
+                                    <a href="#" style="float: right;">
+                                        <button class="sale next3" style="font-size: 1.2em;">&gt;</button>
+                                    </a>
+                                </div>
+                              </div>
+                            <div class="content">
+                                <div class="top-content">
+                                    <a href="javascript:void(0)" class="tag">정보</a>
+                                    <h3 class="title">
+                                        <a href="item-details.html">정보</a>
+                                    </h3>
+                                    <p class="update-time">정보</p>
+                                    <ul class="rating">
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><i class="lni lni-star-filled"></i></li>
+                                        <li><a href="javascript:void(0)">별점</a></li>
+                                    </ul>
+                                    <ul class="info-list">
+                                        <li><a href="javascript:void(0)"><i class="lni lni-map-marker"></i> 지역</a></li>
+                                        <li><a href="javascript:void(0)"><i class="lni lni-timer"></i> 시간</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-content">
+                                    <p class="price">Start From: <span>가격</span></p>
+                                    <a href="javascript:void(0)" class="like"><i class="lni lni-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Grid -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Items Grid Area -->
+
+    <!-- Start Why Choose Area -->
+   
+    <!-- /End Why Choose Area -->
+
+    <!-- Start How Works Area -->
+    
+    <!-- End How Works Area -->
+
+
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-right: 20px;">
+                        <!-- Single Widget -->
+                        <div class="single-footer mobile-app">
+                            <!-- <h3>Mobile Apps</h3> -->
+                            <img class="footer-logo" style="width: 120px;" src="./assets/images/footerlogo.png">
+                            <div class="single-footer f-contact">
+                                <ul>
+                                    <li>(주)GOING | 대표이사 : 김고잉<br><br>사업자 등록번호 : 000-00-000000 <br> 통신판매업신고 : 고잉-0000호 <br> 관광사업자 등록번호 : 제2022-05호 </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-left: 20px;">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link" >
+                            <h3>바로가기</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)">여행지 검색</a></li>
+                                <li><a href="javascript:void(0)">예약 관리</a></li>
+                                <li><a href="javascript:void(0)">장바구니</a></li>
+                                <li><a href="javascript:void(0)">회원가입</a></li>
+                                <li><a href="javascript:void(0)">1대1 문의</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%;">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-contact" >
+                            <h3>Contact</h3>
+                            <ul>
+                                <li>(주)GOING은 통신판매 중개자로서 통신판매의 당사자가 아니며 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
+                                <li>Tel. 1234-5678 <br> Mail. going@going.com <br> addr. 서울특별시 종로구 종로78 미려빌딩 3층</li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+        
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        //========= Category Slider 
+        tns({
+            container: '.category-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: false,
+            controls: true,
+            controlsText: ['<i class="lni lni-chevron-left"></i>', '<i class="lni lni-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 2,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 5,
+                },
+                1170: {
+                    items: 6,
+                }
+            }
+        });
+    </script>
+    <script>
+        $(".prev1").on("click", function (e) {
+          e.preventDefault();
+    
+          // 이미지 현재의 위치
+          var imgOn = $(".imgBox1").find(".on").index();
+          // 이미지 총 개수 
+          var imgLen = $(".imgBox1 .img").length;
+          console.log(imgOn)
+          
+          // imgBox안의 img 중 imgOn 번째의 on 클래스 삭제 
+          $(".imgBox1 .img").eq(imgOn).removeClass("on");
+          // imgBox안의 img 중 imgOn 번째 숨기기 
+          $(".imgBox1 .img").eq(imgOn).css("opacity", 0);
+          
+          //  이전의 위치로 돌아가야함으로
+          imgOn = imgOn -1;
+    
+          if( imgOn < 0 ){
+            // 돌아가 위치가 -1일 경우 
+            // 이미지의 마지막으로 돌아간다
+            $(".imgBox1 .img").eq(imgLen -1).css("opacity", 1);
+            $(".imgBox1 .img").eq(imgLen -1).addClass("on");
+          }else{
+            // 돌아갈 위치가 -1이 아닌 경우
+            $(".imgBox1 .img").eq(imgOn).css("opacity", 1);
+            $(".imgBox1 .img").eq(imgOn).addClass("on");
+          }
+    
+        });
+    
+        $(".next1").on("click", function (e) {
+          e.preventDefault();
+          // 위에 동일 
+          var imgOn = $(".imgBox1").find(".on").index();
+          var imgLen = $(".imgBox1 .img").length;
+    
+          // 위에 동일
+          $(".imgBox1 .img").eq(imgOn).removeClass("on");
+          $(".imgBox1 .img").eq(imgOn).css("opacity", 0);
+          
+          // 다음의 위치로 알아야 되기 때문에 
+          imgOn = imgOn + 1;
+          
+          if( imgOn === imgLen ){
+            // 다음의 위치가 총 개수보다 클 경우
+            // 처음의 위치로 돌아간다
+            $(".imgBox1 .img").eq(0).css("opacity", 1);
+            $(".imgBox1 .img").eq(0).addClass("on");
+          }else{
+            // 다음 위치가 있는 경우 
+            $(".imgBox1 .img").eq(imgOn).css("opacity", 1);
+            $(".imgBox1 .img").eq(imgOn).addClass("on");
+          }
+        });
+        $(".prev2").on("click", function (e) {
+          e.preventDefault();
+    
+          // 이미지 현재의 위치
+          var imgOn = $(".imgBox2").find(".on").index();
+          // 이미지 총 개수 
+          var imgLen = $(".imgBox2 .img").length;
+          console.log(imgOn)
+          
+          // imgBox안의 img 중 imgOn 번째의 on 클래스 삭제 
+          $(".imgBox2 .img").eq(imgOn).removeClass("on");
+          // imgBox안의 img 중 imgOn 번째 숨기기 
+          $(".imgBox2 .img").eq(imgOn).css("opacity", 0);
+          
+          //  이전의 위치로 돌아가야함으로
+          imgOn = imgOn -1;
+    
+          if( imgOn < 0 ){
+            // 돌아가 위치가 -1일 경우 
+            // 이미지의 마지막으로 돌아간다
+            $(".imgBox2 .img").eq(imgLen -1).css("opacity", 1);
+            $(".imgBox2 .img").eq(imgLen -1).addClass("on");
+          }else{
+            // 돌아갈 위치가 -1이 아닌 경우
+            $(".imgBox2 .img").eq(imgOn).css("opacity", 1);
+            $(".imgBox2 .img").eq(imgOn).addClass("on");
+          }
+    
+        });
+    
+        $(".next2").on("click", function (e) {
+          e.preventDefault();
+          // 위에 동일 
+          var imgOn = $(".imgBox2").find(".on").index();
+          var imgLen = $(".imgBox2 .img").length;
+    
+          // 위에 동일
+          $(".imgBox2 .img").eq(imgOn).removeClass("on");
+          $(".imgBox2 .img").eq(imgOn).css("opacity", 0);
+          
+          // 다음의 위치로 알아야 되기 때문에 
+          imgOn = imgOn + 1;
+          
+          if( imgOn === imgLen ){
+            // 다음의 위치가 총 개수보다 클 경우
+            // 처음의 위치로 돌아간다
+            $(".imgBox2 .img").eq(0).css("opacity", 1);
+            $(".imgBox2 .img").eq(0).addClass("on");
+          }else{
+            // 다음 위치가 있는 경우 
+            $(".imgBox2 .img").eq(imgOn).css("opacity", 1);
+            $(".imgBox2 .img").eq(imgOn).addClass("on");
+          }
+        });
+        $(".prev3").on("click", function (e) {
+          e.preventDefault();
+    
+          // 이미지 현재의 위치
+          var imgOn = $(".imgBox3").find(".on").index();
+          // 이미지 총 개수 
+          var imgLen = $(".imgBox3 .img").length;
+          console.log(imgOn)
+          
+          // imgBox안의 img 중 imgOn 번째의 on 클래스 삭제 
+          $(".imgBox3 .img").eq(imgOn).removeClass("on");
+          // imgBox안의 img 중 imgOn 번째 숨기기 
+          $(".imgBox3 .img").eq(imgOn).css("opacity", 0);
+          
+          //  이전의 위치로 돌아가야함으로
+          imgOn = imgOn -1;
+    
+          if( imgOn < 0 ){
+            // 돌아가 위치가 -1일 경우 
+            // 이미지의 마지막으로 돌아간다
+            $(".imgBox3 .img").eq(imgLen -1).css("opacity", 1);
+            $(".imgBox3 .img").eq(imgLen -1).addClass("on");
+          }else{
+            // 돌아갈 위치가 -1이 아닌 경우
+            $(".imgBox3 .img").eq(imgOn).css("opacity", 1);
+            $(".imgBox3 .img").eq(imgOn).addClass("on");
+          }
+    
+        });
+    
+        $(".next3").on("click", function (e) {
+          e.preventDefault();
+          // 위에 동일 
+          var imgOn = $(".imgBox3").find(".on").index();
+          var imgLen = $(".imgBox3 .img").length;
+    
+          // 위에 동일
+          $(".imgBox3 .img").eq(imgOn).removeClass("on");
+          $(".imgBox3 .img").eq(imgOn).css("opacity", 0);
+          
+          // 다음의 위치로 알아야 되기 때문에 
+          imgOn = imgOn + 1;
+          
+          if( imgOn === imgLen ){
+            // 다음의 위치가 총 개수보다 클 경우
+            // 처음의 위치로 돌아간다
+            $(".imgBox3 .img").eq(0).css("opacity", 1);
+            $(".imgBox3 .img").eq(0).addClass("on");
+          }else{
+            // 다음 위치가 있는 경우 
+            $(".imgBox3 .img").eq(imgOn).css("opacity", 1);
+            $(".imgBox3 .img").eq(imgOn).addClass("on");
+          }
+        });
+        </script>
+</body>
+
+</html>

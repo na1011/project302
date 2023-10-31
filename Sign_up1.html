@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GOING - 여행검색 플랫폼</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Web Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        .code {
+            cursor: pointer;
+            padding: 1px 6px;
+            border-radius: 8% !important;
+            background-color: #68a6f1;
+            border: none;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            /* line-height: 1.5; */
+            min-height: calc(1.5em + 1rem + 2px);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/colorlogo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="category.html" aria-label="Toggle navigation">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="category.html" aria-label="Toggle navigation">고객센터</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="category.html" aria-label="Toggle navigation">마이페이지</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            <div class="login-button">
+                                <ul>
+                                    <li>
+                                        <a href="login.html"><i class="lni lni-enter"></i> 로그인</a>
+                                    </li>
+                                    <li>
+                                        <a href="registration.html"><i class="lni lni-user"></i> 회원가입</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button header-button">
+                                <a href="post-item.html" class="btn">여행지 검색</a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">회원가입</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li>회원가입</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- start Registration section -->
+    <section class="login registration section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                    <div class="form-head" style="padding: 0px;">
+                        <div id="infoArea">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active show1"  style="width: 50%; font-size: 1.5em; transition: none;"                                data-bs-toggle="tab" data-bs-target="#nav-grid" type="button"
+                                        role="tab" aria-controls="nav-grid" aria-selected="true">고객 가입</button>
+                                    <button class="nav-link show2" id="nav-list-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-list" type="button" role="tab" style="width: 50%; font-size: 1.5em; transition: none;"
+                                        aria-controls="nav-list" aria-selected="false">사업자 가입</button>
+                                </div>
+                            </nav>             
+                        </div>
+                        <div class="d1">
+                        <form action="#!" method="post" style=" border: 1px solid #c9c9c9; border-top: none; padding: 40px;" >
+                            <div style="margin:  10px;">
+                                
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-9">
+                                    <input type="tel" name="tel" id="input_tel" class="form-control form-control-lg" 
+                                        id="tel" placeholder="전화번호(- 빼고 작성해주세요)" pattern="[0-9]{11}" style="font-size: 1.2em;" required>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="code">코드전송</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-9">
+                                    <input type="text" name="code" id="input_code" class="form-control form-control-lg" placeholder="전송받은 코드" pattern="[0-9]{6}" style="font-size: 1.2em;" required>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="code" disabled>인증하기</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-floating mt-5">
+                              <input type="email" name="email" class="form-control" id="email" required>
+                              <label><span id="result">이메일</span></label>
+                            </div>
+                            
+                            <div class="form-floating mt-3">
+                              <input type="password" name="password" class="form-control form-control-lg mt-3" pattern="^(?=.*[a-zA-z])(?=.*[0-9]).{6,12}$" required>
+                              <label><span>비밀번호 - 대문자 혹은 소문자와 숫자를 합해 6자리 이상 12자리 이하</span></label>
+                            </div>
+                            <div class="form-floating mt-3">
+                              <input type="password" name="passC" class="form-control form-control-lg mt-3" pattern="^(?=.*[a-zA-z])(?=.*[0-9]).{6,12}$" required>
+                              <label><span id="passResult">비밀번호 확인</span></label>
+                            </div>
+                            
+                            <div class="form-floating mt-4">
+                                <input type="text" name="name" class="form-control form-control-lg mt-3" required>
+                                <label><span id="passResult">이름</span></label>
+                            </div>
+
+                            <div class="button">
+                                <button type="submit" class="btn">가입하기</button>
+                            </div>
+                            <p class="outer-link">이미 아이디가 있으신가요? <a href="login.html"> 로그인 하기</a>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="d2">
+                        <form action="#!" method="post" style="border: 1px solid #c9c9c9; border-top: none; padding: 40px;" >
+                            <div style="margin:  10px;">
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-9">
+                                    <input type="tel" name="tel" id="input_tel" class="form-control form-control-lg" 
+                                        id="tel" placeholder="전화번호(- 빼고 작성해주세요)" pattern="[0-9]{11}" style="font-size: 1.2em;" required>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="code">코드전송</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-9">
+                                    <input type="text" name="code" id="input_code" class="form-control form-control-lg" placeholder="전송받은 코드" pattern="[0-9]{6}" style="font-size: 1.2em;" required>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="code" disabled>인증하기</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-floating mt-5">
+                              <input type="email" name="email" class="form-control" id="email" required>
+                              <label><span id="result">이메일</span></label>
+                            </div>
+                            
+                            <div class="form-floating mt-3">
+                              <input type="password" name="password" class="form-control form-control-lg mt-3" pattern="^(?=.*[a-zA-z])(?=.*[0-9]).{6,12}$" required>
+                              <label><span>비밀번호 - 대문자 혹은 소문자와 숫자를 합해 6자리 이상 12자리 이하</span></label>
+                            </div>
+                            <div class="form-floating mt-3">
+                              <input type="password" name="passC" class="form-control form-control-lg mt-3" pattern="^(?=.*[a-zA-z])(?=.*[0-9]).{6,12}$" required>
+                              <label><span id="passResult">비밀번호 확인</span></label>
+                            </div>
+                            
+                            <div class="form-floating mt-4">
+                                <input type="text" name="name" class="form-control form-control-lg mt-3" required>
+                                <label><span id="passResult">이름</span></label>
+                            </div>
+
+                            <div class="button">
+                                <button type="submit" class="btn">가입하기</button>
+                            </div>
+                            <p class="outer-link">이미 아이디가 있으신가요? <a href="login.html"> 로그인 하기</a>
+                            </p>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Registration section -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-right: 20px;">
+                        <!-- Single Widget -->
+                        <div class="single-footer mobile-app">
+                            <!-- <h3>Mobile Apps</h3> -->
+                            <img class="footer-logo" style="width: 140px;" src="./assets/images/footerlogo.png">
+                            <div class="single-footer f-contact">
+                                <ul>
+                                    <li>(주)GOING | 대표이사 : 김고잉<br><br>사업자 등록번호 : 000-00-000000 <br> 통신판매업신고 : 고잉-0000호 <br> 관광사업자 등록번호 : 제2022-05호 </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-left: 20px;">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link" >
+                            <h3 style="font-size: 23px;">바로가기</h3>
+                            <ul style="padding-left: 15px;">
+                                <li><a href="javascript:void(0)">여행지 검색</a></li>
+                                <li><a href="javascript:void(0)">예약 관리</a></li>
+                                <li><a href="javascript:void(0)">장바구니</a></li>
+                                <li><a href="javascript:void(0)">회원가입</a></li>
+                                <li><a href="javascript:void(0)">1대1 문의</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%;">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-contact" >
+                            <h3 style="font-size: 23px;">Contact Us</h3>
+                            <ul style="padding-left: 15px;">
+                                <li>(주)GOING은 통신판매 중개자로서 통신판매의 당사자가 아니며 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
+                                <li>Tel. 1234-5678 <br> Mail. going@going.com <br> addr. 서울특별시 종로구 종로78 미려빌딩 3층</li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+                $('.d1').show(); //페이지를 로드할 때 표시할 요소
+                $('.d2').hide(); //페이지를 로드할 때 숨길 요소
+                $('.di').css({background : '#c9c9c9'});
+                $('.show1').css({
+                    color :'#00000',
+                    // backgroundColor:'#f3f9ff',
+                    border : '2px solid #c9c9c9',
+                    borderBottom : 'none'
+                });
+                $('.show2').css({borderBottom : '1px solid #c9c9c9'});
+                $('.show2').click(function(){
+                $ ('.d1').hide(); //클릭 시 첫 번째 요소 숨김
+                $ ('.d2').show(); //클릭 시 두 번째 요소 표시
+                $('.show2').css({
+                    color :'#00000',
+                    // backgroundColor:'#f3f9ff',
+                    border : '2px solid #c9c9c9',
+                    borderBottom : 'none'
+                });
+                $('.show1').css({
+                    color :'#00000' ,
+                    backgroundColor:'white',
+                    border : 'none',
+                    borderBottom : '1px solid #c9c9c9'
+                });
+                return false;
+                });
+                });      
+                $('.show1').click(function(){
+                $ ('.d2').hide(); //클릭 시 첫 번째 요소 숨김
+                $ ('.d1').show(); //클릭 시 두 번째 요소 표시
+                $('.show1').css({
+                    color :'#00000',
+                    // backgroundColor: '#f3f9ff',
+                    border : '2px solid #c9c9c9',
+                    borderBottom : 'none'
+                });
+                $('.show2').css({
+                    color :'#00000',
+                    backgroundColor:'white',
+                    border : 'none',
+                    borderBottom : '1px solid #c9c9c9'
+                });
+                });
+        </script>
+</body>
+
+</html>

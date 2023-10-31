@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GOING - 여행검색 플랫폼</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Web Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+.board {
+  margin-top: 20px;
+  height: 100px;
+  left: 0px;
+  bottom: 15px;
+  position: relative;
+}
+.board section {
+  position: relative;
+}
+.board h2 {
+  float: left;
+  font-size: 1.6em;
+}
+.board h2 a {
+  display: inline-block;
+  padding: 6px 15px;
+  color: none;
+  font-family: "NamnumEX";
+  border: 1px dotted black;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-image: linear-gradient(to bottom, #eaeaea 100%);
+}
+.board section:target h2 a {
+  color: #ff4911;
+  background: #fff;
+  border: 1px solid #ff6738;
+  border-bottom: 1px solid #fff;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+
+
+.button-container {
+    display: flex; /* Flex 컨테이너로 설정 */
+    justify-content: space-between; /* 버튼 사이의 공간을 균등하게 배치 */
+}
+
+.btnbutton1 {
+    width: 100%; /* 버튼의 너비를 100%로 설정 */
+    padding: 10px; /* 버튼 내부 패딩 */
+    background-color: white; /* 배경색 */
+    color: black; /* 글꼴색 */
+    border: 1px dotted black; /* 테두리 없애기 */
+    cursor: pointer; /* 커서 모양 변경 (마우스를 올리면 손가락 모양으로 변경) */
+    text-align: center;
+    font-family: "NamnumEX";
+    
+    
+}
+.btnbutton2 {
+    width: 100%; /* 버튼의 너비를 100%로 설정 */
+    padding: 10px; /* 버튼 내부 패딩 */
+    background-color: white; /* 배경색 */
+    color: black; /* 글꼴색 */
+    border: 1px dotted black; /* 테두리 없애기 */
+    cursor: pointer; /* 
+    커서 모양 변경 (마우스를 올리면 손가락 모양으로 변경) */
+    text-align: center;
+    font-family: "NamnumEX";
+    
+}
+.btnbutton1:hover {
+    border-bottom: none;
+}
+
+.btnbutton2:hover {
+    border-bottom: none; 
+    
+}
+.btnbutton1:hover + .btnbutton2 {
+    border-top: none;
+    border-right: none;
+    
+}
+.btnbutton2:hover + .btnbutton1 {
+    border-top: none;
+    border-left: none;
+}
+
+
+
+.zoomOutUp {
+  -webkit-animation-name: zoomOutUp;
+  animation-name: zoomOutUp;
+}
+
+.btnbutton2:hover {
+    border-bottom: none;
+}
+.btnbutton2:hover + .btnbutton1 {
+    border-top: none;
+}
+
+
+
+
+.KAKAO {
+    background-image: url(./assets/images/login/kakao_login_large_wide.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: #FEE500; */
+}
+
+.lni-kakao {
+    color: #000000;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo/colorlogo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="index.html" aria-label="Toggle navigation">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="myPage.html" aria-label="Toggle navigation">고객센터</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="myPage.html" aria-label="Toggle navigation">마이페이지</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            <div class="login-button">
+                                <ul>
+                                    <li>
+                                        <a href="login.html"><i class="lni lni-enter"></i> 로그인</a>
+                                    </li>
+                                    <li>
+                                        <a href="registration.html"><i class="lni lni-user"></i> 회원가입</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button header-button">
+                                <a href="post-item.html" class="btn">여행지 검색</a>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">로그인</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li>로그인</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- start login section -->
+    <section class="login section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                    <div class="form-head" style="padding: 0px;">
+                        <div id="infoArea">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active show1"  style="width: 50%; font-size: 1.5em; transition: none;"                                data-bs-toggle="tab" data-bs-target="#nav-grid" type="button"
+                                        role="tab" aria-controls="nav-grid" aria-selected="true">고객 가입</button>
+                                    <button class="nav-link show2" id="nav-list-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-list" type="button" role="tab" style="width: 50%; font-size: 1.5em; transition: none;"
+                                        aria-controls="nav-list" aria-selected="false">사업자 가입</button>
+                                </div>
+                            </nav>           
+                        </div>
+                        <div>
+                           <div class="d1"> 
+                            <form action="#!" method="post"style="border: 1px solid #c9c9c9; border-top: none; padding: 40px;">
+                                <div class="form-group mt-4">
+                                    <label>아이디</label>
+                                    <input name="email" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label>비밀번호</label>
+                                    <input name="password" type="password">
+                                </div>
+                                <div class="check-and-pass">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input width-auto"
+                                                    id="exampleCheck1">
+                                                <label class="form-check-label">로그인 저장</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <a href="javascript:void(0)" class="lost-pass">비밀번호를 잊어버리셨나요?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <button type="submit" class="btn mt-3">로그인</button>
+                                </div>
+                                <div class="alt-option">
+                                    <span>Or</span>
+                                </div>
+                                <div class="socila-login">
+                                    <ul>
+                                        <li><a href="javascript:void(0)" class="KAKAO" img><i class="lni lni-kakao">카카오로 시작하기</i></a></li>
+                                    </ul>
+                                </div>
+                                <p class="outer-link">
+                                    <a href="registration.html">회원가입</a>
+                                </p>
+                            </form>
+                    </div>
+                    <div class="d2"> 
+                        <form action="#!" method="post"style="border: 1px solid #c9c9c9; border-top: none; padding: 40px;">
+                            <div class="form-group mt-4">
+                                <label>아이디</label>
+                                <input name="email" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label>비밀번호</label>
+                                <input name="password" type="password">
+                            </div>
+                            <div class="check-and-pass">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input width-auto"
+                                                id="exampleCheck1">
+                                            <label class="form-check-label">로그인 저장</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <a href="javascript:void(0)" class="lost-pass">비밀번호를 잊어버리셨나요?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button type="submit" class="btn mt-3">로그인</button>
+                            </div>
+                            <div class="alt-option">
+                                <span>Or</span>
+                            </div>
+                            <div class="socila-login">
+                                <ul>
+                                    <li><a href="javascript:void(0)" class="KAKAO" img><i class="lni lni-kakao">카카오로 시작하기</i></a></li>
+                                </ul>
+                            </div>
+                            <p class="outer-link">
+                                <a href="registration.html">회원가입</a>
+                            </p>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end login section -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-right: 20px;">
+                        <!-- Single Widget -->
+                        <div class="single-footer mobile-app">
+                            <!-- <h3>Mobile Apps</h3> -->
+                            <img class="footer-logo" style="width: 140px;" src="./assets/images/footerlogo.png">
+                            <div class="single-footer f-contact">
+                                <ul>
+                                    <li>(주)GOING | 대표이사 : 김고잉<br><br>사업자 등록번호 : 000-00-000000 <br> 통신판매업신고 : 고잉-0000호 <br> 관광사업자 등록번호 : 제2022-05호 </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                           </div>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%; padding-left: 20px;">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link" >
+                            <h3 style="font-size: 23px;">바로가기</h3>
+                            <ul style="padding-left: 15px;">
+                                <li><a href="javascript:void(0)">여행지 검색</a></li>
+                                <li><a href="javascript:void(0)">예약 관리</a></li>
+                                <li><a href="javascript:void(0)">장바구니</a></li>
+                                <li><a href="javascript:void(0)">회원가입</a></li>
+                                <li><a href="javascript:void(0)">1대1 문의</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12" style="width: 30%;">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-contact" >
+                            <h3 style="font-size: 23px;">Contact Us</h3>
+                            <ul style="padding-left: 15px;">
+                                <li>(주)GOING은 통신판매 중개자로서 통신판매의 당사자가 아니며 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
+                                <li>Tel. 1234-5678 <br> Mail. going@going.com <br> addr. 서울특별시 종로구 종로78 미려빌딩 3층</li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+    </footer>
+    <!--/ End Footer Area -->
+    
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+                $('.d1').show(); //페이지를 로드할 때 표시할 요소
+                $('.d2').hide(); //페이지를 로드할 때 숨길 요소
+                $('.di').css({background : '#c9c9c9'});
+                $('.show1').css({
+                    color :'#00000',
+                    // backgroundColor:'#f3f9ff',
+                    border : '2px solid #c9c9c9',
+                    borderBottom : 'none'
+                });
+                $('.show2').css({borderBottom : '1px solid #c9c9c9'});
+                $('.show2').click(function(){
+                $ ('.d1').hide(); //클릭 시 첫 번째 요소 숨김
+                $ ('.d2').show(); //클릭 시 두 번째 요소 표시
+                $('.show2').css({
+                    color :'#00000',
+                    // backgroundColor:'#f3f9ff',
+                    border : '2px solid #c9c9c9',
+                    borderBottom : 'none'
+                });
+                $('.show1').css({
+                    color :'#00000' ,
+                    backgroundColor:'white',
+                    border : 'none',
+                    borderBottom : '1px solid #c9c9c9'
+                });
+                return false;
+                });
+                });      
+                $('.show1').click(function(){
+                $ ('.d2').hide(); //클릭 시 첫 번째 요소 숨김
+                $ ('.d1').show(); //클릭 시 두 번째 요소 표시
+                $('.show1').css({
+                    color :'#00000',
+                    // backgroundColor: '#f3f9ff',
+                    border : '2px solid #c9c9c9',
+                    borderBottom : 'none'
+                });
+                $('.show2').css({
+                    color :'#00000',
+                    backgroundColor:'white',
+                    border : 'none',
+                    borderBottom : '1px solid #c9c9c9'
+                });
+                });
+        </script>
+</body>
+
+</html>
