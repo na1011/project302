@@ -244,3 +244,24 @@
   left: 10px;
   top: 40px;
 }
+
+/* 상품 qna 작성 */
+.row_Q{
+  margin: 0px auto;
+  width: 600px;
+}
+.th_Q {
+  background-color: #fbfbfb;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  width:20%;
+}
+.input_Q {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
