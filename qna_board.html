@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A게시판</title>
+</head>
+<style>
+    .all{ /* div 영역 가운데 정렬*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #QA{
+        font-weight: bold;
+        
+    }
+    #account{
+        font-size: small;
+        color: #837c7c;
+        
+    }
+    .talk{
+        color: black;
+        text-decoration: none;/*밑줄 제거*/
+        font-weight: bold;
+    }
+    .make{
+        background-color: rgb(70, 66, 66);
+        padding: 5px 10px;
+    }
+    .select{
+        background-color: rgba(128, 128, 128, 0.836);
+        padding: 5px 10px;
+    }
+    .make a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    .select a{
+        text-decoration: none;
+        color: white;
+    }
+    .opt{
+        float: right;/*셀렉트 옵션 오른쪽으로 보내기 */
+        padding: 5px 15px;/*안쪽 공간*/
+    }
+
+    /* 게시판 형태 */
+    .board {
+            width: 100%;
+        }
+
+        .board-header {
+            display: flex;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .board-header > div {
+            flex: 1;
+        }
+
+        .board-list {
+            list-style: none; /* 리스트 스타일 제거 */
+            padding: 0;
+            font-size: 0.9em;
+        }
+
+        .board-item {
+            display: flex; /* 좌우로 정렬을 위해 flex 사용 */
+            justify-content: space-between; /* 좌우 정렬 설정 */
+            margin: 2px 0;
+            padding: 8px;
+            text-align: center; 
+        }
+
+        .board-item > div {
+            flex: 1;  
+        }
+        .board-item > div > a{
+            text-decoration: none;
+            color: black;
+        }
+        .pagination{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .pagination > button{
+            background-color: white;
+            font-size: 1.1em;
+        }
+        .pagination > button > a{
+            color: black;
+            text-decoration: none;
+        }
+</style>
+<body>
+    <div class="all"><!--전체-->
+        <div class="">
+            <h2 id="QA">Q&A</h2>
+            <p id="account">구매하시려는 상품에 대해 궁금한 점이 있으신 경우 문의해주세요 <a href="#" class="talk">"판매자 문의"</a>를 통해 판매자와 간편하게 1:1 상담도 가능합니다.</p>
+        </div>   
+        <div><!--작성 및 조회 버튼-->
+            <button class="make"><a href="#">상품 Q&A 작성하기</a></button>
+            <button class="select"><a href="#" target="_blank">나의 Q&A 조회</a></button>
+            <select class="opt">
+                <option value="">답변상태</option>
+                <option value="">미답변</option>
+                <option value="">답변완료</option>
+            </select> 
+        </div>
+        
+        <hr style="width: 100%; background-color: black; margin-top: 15px;"><!--줄-->
+        <div class="board"><!--보드헤더-->
+            <div class="board-header">
+                <div>답변상태</div>
+                <div>제목</div>
+                <div>작성자</div>
+                <div>작성일</div>
+            </div>
+            <hr style="width: 100%;"><!--줄-->
+            <ul class="board-list"><!--보드 리스트-->
+                <li class="board-item">
+                    <div>미답변</div>
+                    <div><a href="#">내용1</a></div>
+                    <div>e***</div>
+                    <div>2023.10.02.</div>
+                </li>
+                <li class="board-item">
+                    <div>미답변</div>
+                    <div><a href="#">내용2</a></div>
+                    <div>go***</div>
+                    <div>2023.09.08.</div>
+                </li>
+                <li class="board-item">
+                    <div>답변완료</div>
+                    <div><a href="#">내용3</a></div>
+                    <div>ty***</div>
+                    <div>2023.08.08.</div>
+                </li>
+                <li class="board-item">
+                    <div>답변완료</div>
+                    <div><a href="#">내용4</a></div>
+                    <div>uj***</div>
+                    <div>2023.07.08.</div>
+                </li>
+                <li class="board-item">
+                    <div>답변완료</div>
+                    <div><a href="#">내용5</a></div>
+                    <div>bv***</div>
+                    <div>2023.06.08.</div>
+                </li>
+                <li class="board-item">
+                    <div>답변완료</div>
+                    <div><a href="#">내용6</a></div>
+                    <div>nm***</div>
+                    <div>2023.05.08.</div>
+                </li>
+                <!-- 원하는 만큼 게시판 항목 추가 -->
+            </ul>
+            <hr style="width: 100%;"><!--줄-->
+        </div>
+        <div class="pagination">
+            <!--<button>&lt; 이전</button>-->
+            <button><a href="#">1</a></button>
+            <button><a href="#">2</a></button>
+            <button><a href="#">3</a></button>
+            <!--<button>4</button>
+            <button>5</button>
+            <button>다음 &gt;</button>-->
+        </div>
+    </div><!--전체-->
+</body>
+</html>

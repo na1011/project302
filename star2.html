@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+h3 { 
+    font-size: 25px;
+    text-align: center;
+     width: 50%;
+     height: 60%;
+     padding: 50px;
+     border : 1px solid black; 
+     margin : 70px
+
+    }
+p2 {
+    border: 1px solid skyblue;
+    padding: 20px;
+}
+.cjh_review {
+    text-align: center;
+
+        }
+#myform fieldset{
+    display: inline-block;
+    direction: rtl;
+    border:0;
+}
+#myform fieldset legend{
+    text-align: right;
+}
+#myform input[type=radio]{
+    display: none;
+}
+#myform label{
+    text-align: center;
+    font-size: 2em;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}ㅎ
+#myform label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#myform label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+#reviewContents {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 1.5px #D3D3D3;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+.star-ratings {
+            color: #aaa9a9;
+            position: relative;
+            unicode-bidi: bidi-override;
+            width: max-content;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1.3px;
+            -webkit-text-stroke-color: #2b2a29;
+        }
+.btn1 {
+        width: 100px;
+        float: left;
+        text-align: center;
+
+        }
+.btn2 {
+        width: 100px;
+        float: right;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    <h2>리뷰쓰기</h2>
+
+    
+
+    <p2 class="title">썸네일</p2>
+    <p3>상품명</p3>
+    <span>지역, 도시 등(search 페이지 참고)</span> 
+   
+
+    <h3 class="cjh_review">
+
+ 	<form class="mb-3" name="myform" id="myform" method="post">
+	<fieldset>
+		<span class="text-bold">상품은 만족하셨나요</span>
+        <p class="star-ratings">
+		<input type="radio" name="reviewStar" value="5" id="rate1"><label
+			for="rate1">★</label>
+		<input type="radio" name="reviewStar" value="4" id="rate2"><label
+			for="rate2">★</label>
+		<input type="radio" name="reviewStar" value="3" id="rate3"><label
+			for="rate3">★</label>
+		<input type="radio" name="reviewStar" value="2" id="rate4"><label
+			for="rate4">★</label>
+		<input type="radio" name="reviewStar" value="1" id="rate5"><label
+			for="rate5">★</label>
+        </p>
+	</fieldset>
+	<div>
+        <p>어떤점이 좋았나요?</p>
+	<textarea class="col-auto form-control" type="text" id="reviewContents"
+		placeholder="최소 10자 이상 입력해주세요"></textarea>
+	</div>
+    <button class="btn1">취소</button>
+    <button class="btn2">등록</button>
+</h1>
+</table>
+</form>			
+</body>
+</html>
