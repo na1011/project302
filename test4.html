@@ -17,25 +17,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        
-
-        table {
+        .table_KYS {
             margin: 20px auto;
             border-collapse: collapse;
             width: 95%;
             border-top: 2px solid #999999;
             border-bottom: 2px solid #999999;
-            
-
         }
 
-        td {
+        .td_KYS {
             padding: 10px;
             border: 1px solid #ccc;
             border-left: none;
             border-right: none;
             padding: 1%;
-
         }
 
         .label_KYS {
@@ -44,16 +39,13 @@
             width: 17%;
         }
 
-        /* 조절하고자 하는 가로 길이 값 설정 */
         .category1_KYS {
             width: 40%;
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
         }
 
         .category2_KYS {
@@ -61,7 +53,6 @@
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -71,7 +62,6 @@
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -81,7 +71,6 @@
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -91,7 +80,6 @@
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -101,36 +89,18 @@
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-
-        input[type="text"],
-        input[type="number"],
-        textarea,
-        select {
-            width: 88%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 7px;
-            transition: border-color 0.3s;
-        }
-
-        textarea {
+        .textarea_KYS {
             width: 70%;
             height: 90px;
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 10px;
-            /* 테두리 둥글게 만들기 */
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        input[type="file"] {
-            margin-top: 10px;
         }
 
         .btn-container_KYS {
@@ -138,7 +108,7 @@
             margin-top: 20px;
         }
 
-        .btn_KYS{
+        .btn_KYS {
             padding: 10px 20px;
             background-color: #3594fa;
             color: #fff;
@@ -148,16 +118,10 @@
             transition: background-color 0.3s;
         }
 
-        .btn:hover {
+        .btn_KYS:hover {
             background-color: #0056b3;
         }
 
-        input[type="text"]:focus,
-        input[type="number"]:focus,
-        textarea:focus,
-        select:focus {
-            border-color: #007BFF;
-        }
     </style>
 </head>
 
@@ -166,11 +130,11 @@
         <form action="상품등록처리" method="post" enctype="multipart/form-data">
             <div class="header_KYS">
                 <h1>상품등록</h1>
-                </div>
-            <table>
+            </div>
+            <table class="table_KYS">
                 <tr>
                     <td class="label_KYS">나라/도시*</td>
-                    <td>
+                    <td class="td_KYS">
                         <select id="category1_KYS" class="category1_KYS">
                             <option value="">전체</option>
                             <option value="유럽">유럽</option>
@@ -179,7 +143,7 @@
                             <option value="아프리카">아프리카</option>
                             <option value="오세아니아">오세아니아</option>
                         </select>
-                        <select id="category1_KYS" class="category1_KYS">
+                        <select id="category2_KYS" class="category2_KYS">
                             <option value="">전체</option>
                             <option value="서울">서울</option>
                             <option value="도쿄">도쿄</option>
@@ -191,51 +155,50 @@
                 </tr>
                 <tr>
                     <td class="label_KYS">인원수</td>
-                    <td>
-                        <select id="category2_KYS" class="category2_KYS">
+                    <td class="td_KYS">
+                        <select id="category3_KYS" class="category2_KYS">
                             <option value="">전체</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                            <option value="">6</option>
-                            <option value="">7</option>
-                            <option value="">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td class="label_KYS">상품명*</td>
-                    <td><input type="text" id="product_name_KYS" name="product_name_KYS" required></td>
+                    <td class="td_KYS"><input type="text" id="product_name_KYS" name="product_name_KYS" required></td>
                 </tr>
                 <tr>
                     <td class="label_KYS">상품코드*</td>
-                    <td><input type="text" id="product_code_KYS" name="product_code_KYS" required></td>
+                    <td class="td_KYS"><input type="text" id="product_code_KYS" name="product_code_KYS" required></td>
                 </tr>
                 <tr>
                     <td class="label_KYS">여행지</td>
-                    <td><input type="text" id="destination_KYS" name="destination_KYS" required></td>
+                    <td class="td_KYS"><input type="text" id="destination_KYS" name="destination_KYS" required></td>
                 </tr>
                 <tr>
                     <td class="label_KYS">가격</td>
-                    <td><input type="number" id="price_KYS" name="price_KYS" required> 원</td>
+                    <td class="td_KYS"><input type="number" id="price_KYS" name="price_KYS" required> 원</td>
                 </tr>
                 <tr>
                     <td class="label_KYS">상세 정보 </td>
-                    <td><textarea id="description" name="description" required></textarea></td>
+                    <td class="td_KYS"><textarea class="textarea_KYS"></textarea></td>
                 </tr>
                 <tr>
                     <td class="label_KYS">상품 이미지</td>
-                    <td><input type="file" id="product_image" name="product_image" accept="image/*" required></td>
+                    <td class="td_KYS"><input type="file" id="product_image" name="product_image" accept="image/*" required></td>
                 </tr>
                 <tr>
                     <td class="label_KYS">날짜</td>
-                    <td>출발일자 : <input type="date" id="travel_date" name="travel_date" required><br>
+                    <td class="td_KYS">출발일자 : <input type="date" id="travel_date" name="travel_date" required><br>
                         도착일자 : <input type="date" id="end_date" name="end_date" required></td>
-
                 </tr>
             </table>
             <div class="btn-container_KYS">

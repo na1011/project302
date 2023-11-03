@@ -112,6 +112,161 @@
         .btn:hover {
             background-color: #0056b3;
         }
+
+        .header_KYS {
+            text-align: center;
+        }
+
+        .container_KYS {
+            width: 45%;
+            margin: 0 auto;
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 95%;
+            border-top: 2px solid #999999;
+            border-bottom: 2px solid #999999;
+            
+
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-left: none;
+            border-right: none;
+            padding: 1%;
+
+        }
+
+        .label_KYS {
+            font-weight: bold;
+            background-color: #f5f0f0;
+            width: 17%;
+        }
+
+        /* 조절하고자 하는 가로 길이 값 설정 */
+        .category1_KYS {
+            width: 40%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .category2_KYS {
+            width: 30%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #product_name_KYS {
+            width: 45%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #product_code_KYS {
+            width: 25%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #price_KYS {
+            width: 25%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #destination_KYS {
+            width: 35%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 88%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            transition: border-color 0.3s;
+        }
+
+        textarea {
+            width: 70%;
+            height: 90px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            /* 테두리 둥글게 만들기 */
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        .btn-container_KYS {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn_KYS{
+            padding: 10px 20px;
+            background-color: #3594fa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007BFF;
+        }
     </style>
 
 </head>
@@ -231,52 +386,89 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <div class="container">
-                            <h1>상품등록</h1>
-                            <form action="상품_등록_처리" method="post" enctype="multipart/form-data">
-                                <label for="product_code">상품코드:</label>
-                                <input type="text" id="product_code" name="product_code" required>
-                    
-                                <label for="product_name">상품명:</label>
-                                <input type="text" id="product_name" name="product_name" required>
-
-                                <label for="location">위치:</label>
-                                <input type="text" id="location" name="location" required>
-                                
-                                <label for="destination">여행지:</label>
-                                <input type="text" id="destination" name="destination" required>
-    
-                    
-                                <label for="description">상품 설명:</label>
-                                <textarea id="description" name="description" required></textarea>
-                    
-                                <label for="product_image">상품 이미지:</label>
-                                <input type="file" id="product_image" name="product_image" accept="image/*" required>
-                                
-                                <div class="inputArea"> 
-                                     <label for="product_price">상품 가격:</label>
-                                     <label>성인</label>
-                                     <select class="category1">
-                                      <option value="">1</option>
-                                      <option value="">2</option>
-                                      <option value="">3</option>
-                                      <option value="">4</option>
-                                      <option value="">5</option>
-                                      <option value="">6</option>
-                                      <option value="">7</option>
-                                      <option value="">8</option>
-                                      <option value="">9</option>
-                                      <option value="">10</option>
-                                     </select>
-                                </div>    
-                                
-                                <div class="btn-container">
-                                    <button class="btn" type="submit">등록</button>
+                    <div class="container_KYS">
+                        <form action="상품등록처리" method="post" enctype="multipart/form-data">
+                            <div class="header_KYS">
+                                <h1>상품등록</h1>
                                 </div>
-                            </form>
-                        </div>
+                            <table>
+                                <tr>
+                                    <td class="label_KYS">나라/도시*</td>
+                                    <td>
+                                        <select id="category1_KYS" class="category1_KYS">
+                                            <option value="">전체</option>
+                                            <option value="유럽">유럽</option>
+                                            <option value="아시아">아시아</option>
+                                            <option value="아메리카">아메리카</option>
+                                            <option value="아프리카">아프리카</option>
+                                            <option value="오세아니아">오세아니아</option>
+                                        </select>
+                                        <select id="category1_KYS" class="category1_KYS">
+                                            <option value="">전체</option>
+                                            <option value="서울">서울</option>
+                                            <option value="도쿄">도쿄</option>
+                                            <option value="뉴욕">뉴욕</option>
+                                            <option value="파리">파리</option>
+                                            <option value="마카오">마카오</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">인원수</td>
+                                    <td>
+                                        <select id="category2_KYS" class="category2_KYS">
+                                            <option value="">전체</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                            <option value="">6</option>
+                                            <option value="">7</option>
+                                            <option value="">8</option>
+                                            <option value="">9</option>
+                                            <option value="">10</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">상품명*</td>
+                                    <td><input type="text" id="product_name_KYS" name="product_name_KYS" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">상품코드*</td>
+                                    <td><input type="text" id="product_code_KYS" name="product_code_KYS" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">여행지</td>
+                                    <td><input type="text" id="destination_KYS" name="destination_KYS" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">가격</td>
+                                    <td><input type="number" id="price_KYS" name="price_KYS" required> 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">상세 정보 </td>
+                                    <td><textarea id="description" name="description" required></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">상품 이미지</td>
+                                    <td><input type="file" id="product_image" name="product_image" accept="image/*" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="label_KYS">날짜</td>
+                                    <td>출발일자 : <input type="date" id="travel_date" name="travel_date" required><br>
+                                        도착일자 : <input type="date" id="end_date" name="end_date" required></td>
+                
+                                </tr>
+                            </table>
+                            <div class="btn-container_KYS">
+                                <button class="btn_KYS" type="submit">등록</button>
+                                <button class="btn_KYS" type="submit">취소</button>
+                            </div>
+                        </form>
                     </div>
+                </body>
                 </div>
             </div>
             <div class="item-details-blocks">
