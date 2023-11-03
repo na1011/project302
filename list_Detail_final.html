@@ -24,96 +24,13 @@
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
     <style>
-        .t-main {
-            position: relative;
-        }
-
-        .t-prev , .t-next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            color: white;
-            font-weight: bold;
-            font-size: 30px;
-            padding: 25px 16px;
-            user-select: none;
-            transition: 0.5s ease;
-            margin-top: -29px;
-        }
-
-        .t-next {
-            right: 0;
-            border-radius: 5px 0 0 5px;
-        }
-
-        .t-prev {
-            left: 0;
-            border-radius: 0 5px 5px 0;
-        }
-
-        .t-prev:hover , .t-next:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        textarea {
-            width: 95%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        textarea {
-            height: 150px;
-        }
-
-        input[type="file"] {
-            margin-top: 10px;
-        }
-
-        .btn-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
+        .b_board-list {
+            margin: 10px 0;
         }
     </style>
-
 </head>
 
 <body>
@@ -232,49 +149,34 @@
                     </div>
 
                     <div class="col-lg-6 col-md-12 col-12">
-                        <div class="container">
-                            <h1>상품등록</h1>
-                            <form action="상품_등록_처리" method="post" enctype="multipart/form-data">
-                                <label for="product_code">상품코드:</label>
-                                <input type="text" id="product_code" name="product_code" required>
-                    
-                                <label for="product_name">상품명:</label>
-                                <input type="text" id="product_name" name="product_name" required>
+                        <div class="product-info">
+                            <h2 class="title">여행상품 이름</h2>
+                            <p class="location"><i class="lni lni-map-marker"></i><a href="javascript:void(0)">여행지, 국가이름</a></p>
+                            <h3 class="price">$999</h3>
+                            <div class="list-info">
+                                <h4>여행일정</h4>
+                                <ul>
+                                    <li><span>1day :</span>데카포 별빛투어+야간 온천</li>
+                                    <li><span>2day :</span>마운트쿡 국립공원 자유시간</li>
+                                    <li><span>3day :</span>시티 워킹투어 2회</li>
+                                    <li><span>4day :</span>호주+퀸스타운 2박 특급호텔</li>
+                                </ul>
+                            </div>
+                            <div class="contact-info">
+                                <ul>
+                                    <li style="left: 0px;">
+                                        <a href="#" class="mail">
+                                            <i class="lni lni-heart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:example@gmail.com" class="mail">
+                                            <i class="lni lni-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
-                                <label for="location">위치:</label>
-                                <input type="text" id="location" name="location" required>
-                                
-                                <label for="destination">여행지:</label>
-                                <input type="text" id="destination" name="destination" required>
-    
-                    
-                                <label for="description">상품 설명:</label>
-                                <textarea id="description" name="description" required></textarea>
-                    
-                                <label for="product_image">상품 이미지:</label>
-                                <input type="file" id="product_image" name="product_image" accept="image/*" required>
-                                
-                                <div class="inputArea"> 
-                                     <label for="product_price">상품 가격:</label>
-                                     <label>성인</label>
-                                     <select class="category1">
-                                      <option value="">1</option>
-                                      <option value="">2</option>
-                                      <option value="">3</option>
-                                      <option value="">4</option>
-                                      <option value="">5</option>
-                                      <option value="">6</option>
-                                      <option value="">7</option>
-                                      <option value="">8</option>
-                                      <option value="">9</option>
-                                      <option value="">10</option>
-                                     </select>
-                                </div>    
-                                
-                                <div class="btn-container">
-                                    <button class="btn" type="submit">등록</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -350,82 +252,152 @@
                             </div>
 
                             <!-- 컨텐츠2 -->
-                            <div class="tab-pane fade" id="nav-item-details" role="tabpanel"
-                                                aria-labelledby="nav-user-info-tab">
+                            <div class="tab-pane fade" id="nav-item-details" role="tabpanel" aria-labelledby="nav-user-info-tab">
                                 <div class="single-block description step-two-content" style="margin-top: 0px;">
-                                    <h3>리뷰 (아래 사진대로)</h3>
-                                    <img src="./assets/images/item-details/review/review.png" style="width: 100%;">
-                                    <p>
-                                        별점
-                                    </p>
-                                    <p>
-                                        아이디 / 날짜 / 신고버튼 
-                                    </p>
-                                    <p>
-                                        한줄평
-                                    </p>
-                                    <hr>
-                                    <p>
-                                        별점
-                                    </p>
-                                    <p>
-                                        아이디 / 날짜 / 신고버튼 
-                                    </p>
-                                    <p>
-                                        한줄평
-                                    </p>
-                                    <hr>
-                                    <p>
-                                        별점
-                                    </p>
-                                    <p>
-                                        아이디 / 날짜 / 신고버튼 
-                                    </p>
-                                    <p>
-                                        한줄평
-                                    </p>
-                                    <hr>
-                                    
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
+                                    <p>리뷰</p> 
                                 </div>
-                            </div>
-
-                            
+                            </div>                
                             <!-- 컨텐츠3 -->
                             <div class="tab-pane fade" id="nav-user-info" role="tabpanel"
                                                 aria-labelledby="nav-user-info-tab">
                                 <div class="single-block description step-three-content" style="margin-top: 0px;">
-                                    <h3>답글형 상품문의 게시판 (아래 사진대로)</h3>
-                                    <img src="./assets/images/item-details/qna/qna.png" style="width: 80%;">
-                                    <p>
-                                        제목 
-                                    </p>
+                                    <div>
+                                    <h4>Q&A</h4>
+                                    <p>구매 하시려는 상품에 대해 궁금한 점이 있으신 경우 문의해주세요. <br>
+                                    <strong style="color: black; cursor: pointer;">'판매자 톡톡문의'</strong> 를 통해 판매자와 간편하게 1:1상담도 가능합니다.</p>
+                                    </strong>
+                                    
+                                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        상품 Q&A작성하기
+                                    </button>
+                                    <button type="button" class="btn btn-secondary">
+                                        나의 Q&A조회 >
+                                    </button>
+                                    <select class="b_opt">
+                                        <option value="">답변상태</option>
+                                        <option value="">미답변</option>
+                                        <option value="">답변완료</option>
+                                    </select> 
+                                    
+                                    <!-- Q&A 작성 모달 -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="row">
+                                                    
+                                                    <h1 class="modal-qna-title">상품 문의하기</h1>
+                                                    <form method="post" action="" class="qna-write">
+                                                        <div class="mb-3 row g-2">
+                                                            <div class="col-md">
+                                                                <label for="name" class="form-label">이름</label>
+                                                                <input type="text" class="form-control" value="userA" disabled readonly>
+                                                            </div>
+                                                            <div class="col-md">
+                                                                <label for="name" class="form-label">날짜</label>
+                                                                <input type="text" class="form-control-plaintext" value="SysDate" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="name" class="form-label">제목</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>                                                 
+                                                        <div class="mb-2">
+                                                            <label for="content" class="form-label">내용</label>
+                                                            <textarea class="form-control" rows="9"></textarea>
+                                                        </div>
+                                                    </form>
 
-                                    <hr>
-                                    <p>
-                                        제목 
-                                    </p>
+                                                    <div class="modal-footer" style="justify-content: center;">
+                                                        <button type="button" class="btn btn-outline-primary">등록</button>
+                                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">취소</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Q&A 작성 모달 -->
 
-                                    <hr>
-                                    <p>
-                                        제목 
-                                    </p>
+                                    <!-- Q&A 게시판 -->
+                                    <hr style="width: 100%; background-color: black; margin-top: 15px;"><!--줄-->
+                                    <div class="b_board"><!--보드헤더-->
+                                        <div class="b_board-header">
+                                            <div>답변상태</div>
+                                            <div>제목</div>
+                                            <div>작성자</div>
+                                            <div>작성일</div>
+                                        </div>
+                                        <hr style="width: 100%;"><!--줄-->
+                                        <ul class="b_board-list"><!--보드 리스트-->
+                                            <div class="b_board-item">
+                                                <div>미답변</div>
+                                                <div><a href="#">내용1</a></div>
+                                                <div>e***</div>
+                                                <div>2023.10.02.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>미답변</div>
+                                                <div><a href="#">내용2</a></div>
+                                                <div>go***</div>
+                                                <div>2023.09.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용3</a></div>
+                                                <div>ty***</div>
+                                                <div>2023.08.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용4</a></div>
+                                                <div>uj***</div>
+                                                <div>2023.07.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용5</a></div>
+                                                <div>bv***</div>
+                                                <div>2023.06.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용6</a></div>
+                                                <div>nm***</div>
+                                                <div>2023.05.08.</div>
+                                            </div>
+                                            <!-- 원하는 만큼 게시판 항목 추가 -->
+                                        </ul>
+                                        <hr style="width: 100%;"><!--줄-->
+                                    </div>
+                                    <div class="b_pagination">
+                                        <!--<button>&lt; 이전</button>-->
+                                        <button><a href="#">1</a></button>
+                                        <button><a href="#">2</a></button>
+                                        <button><a href="#">3</a></button>
+                                    </div>
+                                    <!-- Q&A 게시판 -->
 
-                                    <hr>
                                 </div>
                             </div>
-
                         </div>
-
+                    </div>
                         <!-- Start Single Block -->
                         <div class="single-block tags">
                             <h3>Tags</h3>
                             <ul>
-                                <li><a href="javascript:void(0)">#국내여행</a></li>
-                                <li><a href="javascript:void(0)">#해외여행</a></li>
-                                <li><a href="javascript:void(0)">#패키지여행</a></li>
+                                <li><a href="javascript:void(0)">#크라운 플라자</a></li>
+                                <li><a href="javascript:void(0)">#프리미어</a></li>
+                                <li><a href="javascript:void(0)">#시티뷰</a></li>
                                 <li><a href="javascript:void(0)">#테마파크</a></li>
                                 <li><a href="javascript:void(0)">#야경투어</a></li>
-                                <li><a href="javascript:void(0)">#힐링투어</a></li>
+                                <li><a href="javascript:void(0)">#스톤마사지</a></li>
                             </ul>
                         </div>
                         <!-- End Single Block -->
@@ -446,13 +418,75 @@
                             <!-- End Single Block -->
                             <!-- Start Single Block -->
                             <div class="single-block contant-seller comment-form ">
-                                <h3>미제</h3>
+                                <h3>인원 수</h3>
                                 <form action="#" method="POST">
                                         <ul class="list">
-                                                
+                                                <li>
+                                                    <div class="select mt-3">    
+                                                        <span>성인</span>
+                                                        <select id="jq_id_adultCnt" class="jq_cl_personCnt">
+                                                                <option value="1" selected="selected">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                                <option value="11">11</option>
+                                                                <option value="12">12</option>
+                                                                <option value="13">13</option>
+                                                                <option value="14">14</option>
+                                                                <option value="15">15</option>
+                                                                <option value="16">16</option>
+                                                                <option value="17">17</option>
+                                                                <option value="18">18</option>
+                                                                <option value="19">19</option>
+                                                                <option value="20">20</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
 
-                                               
-                                                
+                                                <li>
+                                                    <div class="select mt-3">
+                                                        <span>아동</span>
+                                                        <select id="jq_id_childCnt" class="jq_cl_personCnt">
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="select mt-3">
+                                                        <span>유아</span>
+                                                        <select id="jq_id_infantCnt" class="jq_cl_personCnt">
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <h5 class="mt-4">000,000원</h5>
                                         </ul>
                                 </form>
                             </div>
