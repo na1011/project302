@@ -4,14 +4,9 @@
 <head>
     <title>여행상품 등록</title>
     <style>
-        body {
-            font-family: Arial;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
+        
 
-        .container {
+        .container_KYS {
             max-width: 50%;
             margin: 0 auto;
             padding: 20px;
@@ -42,13 +37,13 @@
             
         }
 
-        .label {
+        .label_KYS {
             font-weight: bold;
             background-color: #f5f0f0;
         }
 
         /* 조절하고자 하는 가로 길이 값 설정 */
-        .category1 {
+        .category1_KYS {
             width: 40%;
             padding: 10px;
             border: 2px solid #ccc;
@@ -57,7 +52,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
         }
-        .category2 {
+        .category2_KYS {
             width: 15%;
             padding: 10px;
             border: 2px solid #ccc;
@@ -65,7 +60,7 @@
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #product_name {
+        #product_name_KYS {
             width: 45%;
             padding: 10px;
             border: 2px solid #ccc;
@@ -73,7 +68,7 @@
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #product_code {
+        #product_code_KYS {
             width: 25%;
             padding: 10px;
             border: 2px solid #ccc;
@@ -81,7 +76,7 @@
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #price {
+        #price_KYS {
             width: 25%;
             padding: 10px;
             border: 2px solid #ccc;
@@ -89,7 +84,7 @@
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #destination {
+        #destination_KYS {
             width: 35%;
             padding: 10px;
             border: 2px solid #ccc;
@@ -124,12 +119,12 @@
             margin-top: 10px;
         }
 
-        .btn-container {
+        .btn-container_KYS {
             text-align: center;
             margin-top: 20px;
         }
 
-        .btn {
+        .btn_KYS {
             padding: 10px 20px;
             background-color: #3594fa;
             color: #fff;
@@ -154,14 +149,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container_KYS">
         <h1>여행상품 등록</h1>
         <form action="상품등록처리" method="post" enctype="multipart/form-data">
             <table>
                 <tr>
-                    <td class="label">나라/도시 *</td>
+                    <td class="label_KYS">나라/도시 *</td>
                     <td>
-                        <select id="category1" class="category1">
+                        <select id="category1_KYS" class="category1_KYS">
                             <option value="">전체</option>
                             <option value="유럽">유럽</option>
                             <option value="아시아">아시아</option>
@@ -169,7 +164,7 @@
                             <option value="아프리카">아프리카</option>
                             <option value="오세아니아">오세아니아</option>
                         </select>
-                        <select id="category1" class="category1">
+                        <select id="category1_KYS" class="category1_KYS">
                             <option value="">전체</option>
                             <option value="서울">서울</option>
                             <option value="도쿄">도쿄</option>
@@ -180,9 +175,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">인원수</td>
+                    <td class="label_KYS">인원수</td>
                     <td>
-                        <select id="category2" class="category2">
+                        <select id="category2_KYS" class="category2_KYS">
                             <option value="">전체</option>
                             <option value="">1</option>
                             <option value="">2</option>
@@ -198,39 +193,39 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">상품명 *</td>
-                    <td><input type="text" id="product_name" name="product_name" required></td>
+                    <td class="label_KYS">상품명 *</td>
+                    <td><input type="text" id="product_name_KYS" name="product_name_KYS" required></td>
                 </tr>
                 <tr>
-                    <td class="label">상품코드 *</td>
-                    <td><input type="text" id="product_code" name="product_code" required></td>
+                    <td class="label_KYS">상품코드 *</td>
+                    <td><input type="text" id="product_code_KYS" name="product_code_KYS" required></td>
                 </tr>
                 <tr>
-                    <td class="label">여행지</td>
-                    <td><input type="text" id="destination" name="destination" required></td>
+                    <td class="label_KYS">여행지</td>
+                    <td><input type="text" id="destination_KYS" name="destination_KYS" required></td>
                 </tr>
                 <tr>
-                    <td class="label">가격</td>
-                    <td><input type="number" id="price" name="price" required> 원</td>
+                    <td class="label_KYS">가격</td>
+                    <td><input type="number" id="price_KYS" name="price_KYS" required> 원</td>
                 </tr>
                 <tr>
-                    <td class="label">상세 정보 </td>
+                    <td class="label_KYS">상세 정보 </td>
                     <td><textarea id="description" name="description" required></textarea></td>
                 </tr>
                 <tr>
-                    <td class="label">상품 이미지</td>
+                    <td class="label_KYS">상품 이미지</td>
                     <td><input type="file" id="product_image" name="product_image" accept="image/*" required></td>
                 </tr>
                 <tr>
-                    <td class="label">날짜</td>
+                    <td class="label_KYS">날짜</td>
                     <td>출발일자 : <input type="date" id="travel_date" name="travel_date" required>
                         도착일자 : <input type="date" id="end_date" name="end_date" required></td>
                     
                 </tr>   
             </table>
-            <div class="btn-container">
-                <button class="btn" type="submit">등록</button>
-                <button class="btn" type="submit">취소</button>
+            <div class="btn-container_KYS">
+                <button class="btn_KYS" type="submit">등록</button>
+                <button class="btn_KYS" type="submit">취소</button>
             </div>
         </form>
     </div>
