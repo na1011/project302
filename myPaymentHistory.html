@@ -196,24 +196,42 @@
                                             <p>OO투어</p>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-12">
-                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                                 리뷰 작성
                                             </button>
 
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                                    </div>
+                                                        <h5 class="modal-qna-title" id="exampleModalLabel">리뷰 작성</h5>
+                                                        
+                                                        <div class="modal-body review-modal-body">
+                                                            <form class="mb-3" name="reviewForm" id="reviewForm" method="post">
+                                                                <fieldset class="review-filedset">  
+                                                                    <strong class="review_modal_middle">여핼은 만족하셨나요?</strong>
+                                                                    <p class="star-ratings">
+                                                                        <input type="radio" name="reviewStar" value="5" id="rate1"><label
+                                                                            for="rate1">★</label>
+                                                                        <input type="radio" name="reviewStar" value="4" id="rate2"><label
+                                                                            for="rate2">★</label>
+                                                                        <input type="radio" name="reviewStar" value="3" id="rate3"><label
+                                                                            for="rate3">★</label>
+                                                                        <input type="radio" name="reviewStar" value="2" id="rate4"><label
+                                                                            for="rate4">★</label>
+                                                                        <input type="radio" name="reviewStar" value="1" id="rate5"><label
+                                                                            for="rate5">★</label>
+                                                                    </p>
+                                                                </fieldset>
+                                                                <strong class="review_modal_middle mt-4">어떤 점이 좋았나요?</strong>
+                                                                <textarea class="col-auto form-control review-area mt-3" type="text" id="reviewContents"
+                                                                    placeholder="최소 10자 이상 입력해주세요"></textarea>
+                                                            </form>
+                                                        </div>
+
+                                                        <div class="modal-footer" style="justify-content: center;">
+                                                            <button type="button" class="btn btn-primary">등록</button>
+                                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">취소</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
