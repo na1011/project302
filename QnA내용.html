@@ -6,23 +6,18 @@
     <title>Insert title here</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style type="text/css">
-      .row{
-        margin: 0px auto;
+      .row_Q{
+        margin: 0px 20px;
         width: 600px;
       }
-      h2 {
-        font-size: 1.5em;
+      .h2_Q {
+        font-size: 2em;
       }
-      .table>tbody>tr>th {
-        background-color: #fbfbfb;
+      .th_Q {
+        background-color: #f5f0f0;
+        width:20%;
       }
-      .input-s {
-        height: 30px;
-        padding: 5px 10px;
-        font-size: 12px;
-        line-height: 1.5;
-      }
-      .btn {
+      .btn_Q {
 			background-color: #5394E3;
 			color: #fff;
 			border-color: #5394E3;
@@ -30,33 +25,33 @@
 			font-size: 12px;
 			line-height: 1.5;
 			border-radius: 3px;
-		}
+		  }
     </style>
     </head>
     <body>
         <div style="height:20px"></div>
-        <div class="row">
+        <div class="row_Q">
           <form method="post" action="">
           <table class="table" style="border-top: 2px solid #999999; border-bottom: 2px solid #999999;">
             <div>
-                <h2>Q&A</h2>
-                <div style="float: right;">sysdate</div>
+                <h2 class="h2_Q">Q&A</h2>
+                <div style="float: right; margin-bottom: 3px;">sysdate</div>
               </div>
             <tr>
-              <th width="20%" style="padding-top: 12px;">제목</th>
-              <td width="85%">
+              <th class="th_Q" style="padding-top: 10px;">제목</th>
+              <td width="85%" style="padding: 10px;">
                 제목 내용
               </td>
             </tr>
             <tr>
-              <th width="15%" style="padding-top: 12px;">작성자</th>
-              <td width="85%">
+              <th class="th_Q" style="padding-top: 10px;">작성자</th>
+              <td width="85%" style="padding: 10px;">
                 작성자 이름
               </td>
             </tr>
             <tr>
-              <th width="15%" style="padding-top: 12px;">내용</th>
-              <td width="85%">
+              <th class="th_Q" style="padding-top: 10px;">내용</th>
+              <td width="85%" style="padding: 10px;">
                 내용-------------------------------------------------------------------------------------------
                 내용-------------------------------------------------------------------------------------------
                 내용-------------------------------------------------------------------------------------------
@@ -69,9 +64,9 @@
             </tr>
             <tr>
                 <td colspan="3" style="text-align: right">
-                    <button class="btn_board_del btn"><strong>삭제</strong></button>
-                    <button class="btn_board_edit btn"><strong>수정</strong></button>
-                    <button class="btn_board_list btn"><strong>목록</strong></button>        
+                    <button class="btn_board_del btn_Q"><strong>삭제</strong></button>
+                    <button class="btn_board_edit btn_Q"><strong>수정</strong></button>
+                    <button class="btn_board_list btn_Q"><strong>목록</strong></button>        
                 </td>
             </tr>
           </table>
