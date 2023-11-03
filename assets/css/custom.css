@@ -3,6 +3,11 @@ body {
 }
 
 /* (시작) 마이페이지 + 슬라이드 + 예약 및 결제 */
+
+.count-input > input {
+  width: 75%;
+}
+
 .t-main {
   position: relative;
 }
