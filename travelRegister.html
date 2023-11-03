@@ -235,7 +235,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-12">햐
+                                                        <div class="col-lg-6 col-12">
                                                             <div class="form-group">
                                                                 <label>도시선택*</label>
                                                                 <div class="selector-head">
@@ -316,9 +316,7 @@
                                                                 </label>
                                                             </div>
                                                             <div class="form-group button mb-0">
-                                                                <button type="button" class="btn" id="nav-item-details-tab" dx`ata-bs-toggle="tab"
-                                                                data-bs-target="#nav-item-details" role="tab"
-                                                                aria-controls="nav-item-details">다음</button>
+                                                                <button class="btn" type="button" onclick="secondStep()">다음</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -454,9 +452,8 @@
                                                         </div>
                                                         <div class="col-12">
                                                             <div class="form-group button mb-0">
-                                                                <button type="submit" class="btn ">이전</button>
-                                                                <button type="submit" class="btn ">다음</button>
-                                                                
+                                                                <button class="btn alt-btn" type="button" onclick="firstStep()">이전</button>
+                                                                <button class="btn" type="button" onclick="thirdStep()">다음</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -495,7 +492,8 @@
                                                         </div>                                                                                                           
                                                         <div class="col-12">
                                                             <div class="form-group button mb-0">
-                                                                <button type="submit" class="btn ">제출</button>
+                                                                <button class="btn alt-btn" type="button" onclick="secondStep()">이전</button>
+                                                                <button class="btn" type="submit">제출</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -582,6 +580,17 @@
     <script src="assets/js/tiny-slider.js"></script>
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        function firstStep() {
+            document.querySelector('#nav-item-info-tab').click();
+        }
+        function secondStep() {
+            document.querySelector('#nav-item-details-tab').click();
+        }
+        function thirdStep() {
+            document.querySelector('#nav-user-info-tab').click();
+        }
+    </script>
 </body>
 
 </html>
