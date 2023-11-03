@@ -298,6 +298,7 @@ body {
 }
 
 .modal-qna-title {
+  position: relative;
   display: block;
   padding: 20px 30px;
   background-color: #353b4c;
@@ -305,6 +306,13 @@ body {
   letter-spacing: -1px;
   color: #fff;
   font-weight: normal;
+}
+
+.modal-qna-title .btn-close {
+  position: absolute;
+  padding: .5rem .5rem;
+  margin: auto;
+  right: 30px;
 }
 
 .qna-write {
@@ -489,3 +497,29 @@ input[type=radio]:checked ~ label{
 }
 
 /* (끝) 리뷰 작성 CJH */
+
+
+/* 리뷰 목록 LDH */
+.ldh_moy {
+  border: 1px solid #f5f9fd;
+  padding: 30px;
+  margin: 40px;
+  background-color: #f5f9fd;
+}
+.ldhbtn_a {
+  font-size: 1.2em;
+  border: 1px solid rgba(0,0,0,.1);
+  color: white;
+  background-color:#333;
+  padding: 10px;
+  margin: 8px;
+}
+.ldhbtn_b {
+  font-size: 1.2em;
+  border: 1px solid rgba(0,0,0,.1);
+  color: white;
+  background-color:#999;
+  padding: 10px;
+  margin: 8px;
+}
+/* (끝) 리뷰 목록 LDH */
