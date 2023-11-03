@@ -1,3 +1,7 @@
+body {
+  font-family: Helvetica
+}
+
 /* (시작) 마이페이지 + 슬라이드 + 예약 및 결제 */
 .t-main {
   position: relative;
@@ -288,31 +292,28 @@
   }
 }
 
-.th_Q {
-  background-color: #f5f0f0;
-  line-height: 1.42857143;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-  width:20%;
-  padding: 10px 0 10px 30px;
+.modal-qna-title {
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+  background-color: #353b4c;
+  font-size: 23px;
+  letter-spacing: -1px;
+  color: #fff;
+  font-weight: normal;
 }
 
-.input_Q, .area_Q {
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
+.modal-qna-title .btn-close {
+  position: absolute;
+  padding: .5rem .5rem;
+  margin: auto;
+  right: 30px;
 }
 
-.input_Q {
-  line-height: 1.5;
-  width: 20%;
+.qna-write {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 30px;
 }
-
-.area_Q {
-  width: 90%;
-}
-
-
 
 /* Q&A 게시판 YWJ */
 .b_all{ 
