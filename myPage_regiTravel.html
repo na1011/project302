@@ -282,23 +282,40 @@
                                 <table class="table_KYS">
                                     <tr>
                                         <td class="label_KYS">나라/도시*</td>
-                                        <td class="td_KYS">
-                                            <select id="category1_KYS" class="category1_KYS">
-                                                <option value="">전체</option>
-                                                <option value="유럽">유럽</option>
-                                                <option value="아시아">아시아</option>
-                                                <option value="아메리카">아메리카</option>
-                                                <option value="아프리카">아프리카</option>
-                                                <option value="오세아니아">오세아니아</option>
-                                            </select>
-                                            <select id="category2_KYS" class="category2_KYS">
-                                                <option value="">전체</option>
-                                                <option value="서울">서울</option>
-                                                <option value="도쿄">도쿄</option>
-                                                <option value="뉴욕">뉴욕</option>
-                                                <option value="파리">파리</option>
-                                                <option value="마카오">마카오</option>
-                                            </select>
+                                        <td class="td_KYS row g-2">
+                                            <div class="col-md">
+                                                <input class="form-control" list="continent" placeholder="대륙 선택...">
+                                                <datalist id="continent">
+                                                    <option value="">전체</option>
+                                                    <option value="유럽">유럽</option>
+                                                    <option value="아시아">아시아</option>
+                                                    <option value="아메리카">아메리카</option>
+                                                    <option value="아프리카">아프리카</option>
+                                                    <option value="오세아니아">오세아니아</option>
+                                                </datalist>
+                                            </div>
+                                            <div class="col-md">
+                                                <input class="form-control" list="country" placeholder="국가 선택...">
+                                                <datalist id="country">
+                                                    <option value="">미국</option>
+                                                    <option value="서울">한국</option>
+                                                    <option value="도쿄">일본</option>
+                                                    <option value="뉴욕">프랑스</option>
+                                                    <option value="파리">어쩌고</option>
+                                                    <option value="마카오">저쩌고</option>
+                                                </datalist>
+                                            </div>
+                                            <div class="col-md">
+                                                <input class="form-control" list="city" placeholder="도시 선택...">
+                                                <datalist id="city">
+                                                    <option value="">전체</option>
+                                                    <option value="서울">서울</option>
+                                                    <option value="도쿄">도쿄</option>
+                                                    <option value="뉴욕">뉴욕</option>
+                                                    <option value="파리">파리</option>
+                                                    <option value="마카오">마카오</option>
+                                                </datalist>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -350,8 +367,8 @@
                                     </tr>
                                 </table>
                                 <div class="btn-container_KYS">
-                                    <button class="btn_KYS" type="submit">등록</button>
-                                    <button class="btn_KYS" type="submit">취소</button>
+                                    <button type="button" class="btn btn-outline-secondary">등록</button>
+                                    <button type="button" class="btn btn-outline-danger">취소</button>
                                 </div>
                             </form>
 
