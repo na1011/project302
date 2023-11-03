@@ -1,3 +1,36 @@
+/* (시작) 마이페이지 + 슬라이드 + 예약 및 결제 */
+.t-main {
+  position: relative;
+}
+
+.t-prev , .t-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 25px 16px;
+  user-select: none;
+  transition: 0.5s ease;
+  margin-top: -29px;
+}
+
+.t-next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.t-prev {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.t-prev:hover , .t-next:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
 .shopping-cart {
   background-color: #f9f9f9;
 }
@@ -244,6 +277,8 @@
   left: 10px;
   top: 40px;
 }
+/* (끝) 마이페이지 + 슬라이드 + 예약 및 결제 */
+
 
 /* 상품 qna 작성 */
 @media (min-width: 576px) {
@@ -253,64 +288,36 @@
   }
 }
 
-.modal-margin {
-  margin: 0, 15px;
-}
-
 .th_Q {
   background-color: #f5f0f0;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
   width:20%;
+  padding: 10px 0 10px 30px;
 }
-.input_Q {
-  height: 30px;
+
+.input_Q, .area_Q {
+  border: 2px solid #ccc;
+  border-radius: 5px;
   padding: 5px;
-  font-size: 12px;
+}
+
+.input_Q {
   line-height: 1.5;
+  width: 20%;
 }
 
-/* 슬라이드 */
-.t-main {
-  position: relative;
+.area_Q {
+  width: 90%;
 }
 
-.t-prev , .t-next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 25px 16px;
-  user-select: none;
-  transition: 0.5s ease;
-  margin-top: -29px;
-}
-
-.t-next {
-  right: 0;
-  border-radius: 5px 0 0 5px;
-}
-
-.t-prev {
-  left: 0;
-  border-radius: 0 5px 5px 0;
-}
-
-.t-prev:hover , .t-next:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-}
 
 
 /* Q&A 게시판 YWJ */
 .b_all{ 
-  /* div 영역 가운데 정렬*/
-/*position: absolute;*/
-top: 50%;
-left: 50%;
-/*transform: translate(-50%, -50%);*/
+  top: 50%;
+  left: 50%;
 }
 #b_QA{
   font-weight: bold;
@@ -348,7 +355,7 @@ left: 50%;
   padding: 5px 15px;/*안쪽 공간*/
 }
 
-/* 게시판 형태 */
+    /* 게시판 형태 */
 .b_board {
   width: 100%;
 }
