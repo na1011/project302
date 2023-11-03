@@ -24,55 +24,7 @@
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <style>
-        .btn_a {
-            font-size: 1.2em;
-            border: 1px solid rgba(0,0,0,.1);
-            color: white;
-            background-color:#333;
-            padding: 10px;
-            margin: 8px;
-        }
-        .btn_b {
-            font-size: 1.2em;
-            border: 1px solid rgba(0,0,0,.1);
-            color: white;
-            background-color:#999;
-            padding: 10px;
-            margin: 8px;
-        }
-        .t-main {
-            position: relative;
-        }
-
-        .t-prev , .t-next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            color: white;
-            font-weight: bold;
-            font-size: 30px;
-            padding: 25px 16px;
-            user-select: none;
-            transition: 0.5s ease;
-            margin-top: -29px;
-        }
-
-        .t-next {
-            right: 0;
-            border-radius: 5px 0 0 5px;
-        }
-
-        .t-prev {
-            left: 0;
-            border-radius: 0 5px 5px 0;
-        }
-
-        .t-prev:hover , .t-next:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-    </style>
-
+    <link rel="stylesheet" href="assets/css/custom.css" />
 </head>
 
 <body>
@@ -344,60 +296,124 @@
                                 <div class="single-block description step-three-content" style="margin-top: 0px;">
                                     <div>
                                     <h4>Q&A</h4>
-                                    <p>구매하시려한느 상품에 대해 궁금한 점이 있으신 경우 문의해주세요.
-                                    <strong style="color: black; cursor: pointer;">'판매자 톡톡문의'</strong>를 통해 판매자와 간편하게 1:1상담도 가능합니다.</p>
+                                    <p>구매 하시려는 상품에 대해 궁금한 점이 있으신 경우 문의해주세요. <br>
+                                    <strong style="color: black; cursor: pointer;">'판매자 톡톡문의'</strong> 를 통해 판매자와 간편하게 1:1상담도 가능합니다.</p>
                                     </strong>
                                     
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         상품 Q&A작성하기
                                     </button>
+                                    <button type="button" class="btn btn-secondary">
+                                        나의 Q&A조회 >
+                                    </button>
+                                    <select class="b_opt">
+                                        <option value="">답변상태</option>
+                                        <option value="">미답변</option>
+                                        <option value="">답변완료</option>
+                                    </select> 
                                     
+                                    <!-- Q&A 작성 모달 -->
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-scrollable">
-                                        <div class="modal-content" style="width: 600px;">
+                                            <div class="modal-content" style="width: 650px;">
+                                                <div class="row" style="margin: 0 15px;">
+                                                <form method="post" action="">
+                                                <table class="table" style="border-top: 2px solid #999999; border-bottom: 2px solid #999999;">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel" style="font-size: 2em;">Q&A</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
 
-                                            <div style="height:20px"></div>
-                                            <div class="row_Q" style="margin: 0 20px;">
-                                              <form method="post" action="">
-                                              <table class="table" style="border-top: 2px solid #999999; border-bottom: 2px solid #999999;">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel" style="font-size: 2em;">Q&A</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <tr>
+                                                    <th class="th_Q" style="padding-top: 15px;">이름</th>
+                                                    <td width="85%">
+                                                        <input type=text name="name" size="15" class="input_Q" required style="border: 2px solid #ccc; border-radius: 10px; padding: 5px;">
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th class="th_Q" style="padding-top: 15px;">제목</th>
+                                                    <td width="85%">
+                                                        <input type=text name="subject" size="50" class="input_Q" required style="border: 2px solid #ccc; border-radius: 10px; padding: 5px;">
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th class="th_Q" style="padding-top: 15px;">내용</th>
+                                                    <td width="85%">
+                                                        <textarea rows="10" cols="52" name="content" required style="border: 2px solid #ccc; border-radius: 10px; padding: 5px;"></textarea>
+                                                    </td>
+                                                    </tr>
+                                                </table>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-sm btn-danger" style="background-color: #5394E3; border-color: #5394E3;">등록</button>
+                                                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">취소</button>
                                                 </div>
-
-                                                <tr>
-                                                  <th class="th_Q" style="padding-top: 15px;">이름</th>
-                                                  <td width="85%">
-                                                    <input type=text name="name" size="15" class="input_Q" required style="border: 2px solid #ccc; border-radius: 10px; padding: 5px;">
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th class="th_Q" style="padding-top: 15px;">제목</th>
-                                                  <td width="85%">
-                                                    <input type=text name="subject" size="50" class="input_Q" required style="border: 2px solid #ccc; border-radius: 10px; padding: 5px;">
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th class="th_Q" style="padding-top: 15px;">내용</th>
-                                                  <td width="85%">
-                                                    <textarea rows="10" cols="52" name="content" required style="border: 2px solid #ccc; border-radius: 10px; padding: 5px;"></textarea>
-                                                  </td>
-                                                </tr>
-                                            </table>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-sm btn-danger" style="background-color: #5394E3; border-color: #5394E3;">등록</button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">취소</button>
+                                                
+                                                </form>
+                                                </div>
                                             </div>
-                                            
-                                            </form>
-                                            </div>
-
-                                        </div>
                                         </div>
                                     </div>
+                                    <!-- Q&A 작성 모달 -->
 
-                                    <a class="btn_a" href="#" type="button">상품 Q&A작성하기</a>
-                                    <a class="btn_b" href="#" type="button">나의 Q&A조회 ></a>
+                                    <!-- Q&A 게시판 -->
+                                    <hr style="width: 100%; background-color: black; margin-top: 15px;"><!--줄-->
+                                    <div class="b_board"><!--보드헤더-->
+                                        <div class="b_board-header">
+                                            <div>답변상태</div>
+                                            <div>제목</div>
+                                            <div>작성자</div>
+                                            <div>작성일</div>
+                                        </div>
+                                        <hr style="width: 100%;"><!--줄-->
+                                        <ul class="b_board-list"><!--보드 리스트-->
+                                            <div class="b_board-item">
+                                                <div>미답변</div>
+                                                <div><a href="#">내용1</a></div>
+                                                <div>e***</div>
+                                                <div>2023.10.02.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>미답변</div>
+                                                <div><a href="#">내용2</a></div>
+                                                <div>go***</div>
+                                                <div>2023.09.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용3</a></div>
+                                                <div>ty***</div>
+                                                <div>2023.08.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용4</a></div>
+                                                <div>uj***</div>
+                                                <div>2023.07.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용5</a></div>
+                                                <div>bv***</div>
+                                                <div>2023.06.08.</div>
+                                            </div>
+                                            <div class="b_board-item">
+                                                <div>답변완료</div>
+                                                <div><a href="#">내용6</a></div>
+                                                <div>nm***</div>
+                                                <div>2023.05.08.</div>
+                                            </div>
+                                            <!-- 원하는 만큼 게시판 항목 추가 -->
+                                        </ul>
+                                        <hr style="width: 100%;"><!--줄-->
+                                    </div>
+                                    <div class="b_pagination">
+                                        <!--<button>&lt; 이전</button>-->
+                                        <button><a href="#">1</a></button>
+                                        <button><a href="#">2</a></button>
+                                        <button><a href="#">3</a></button>
+                                    </div>
+                                    <!-- Q&A 게시판 -->
+
                                 </div>
                             </div>
                         </div>
