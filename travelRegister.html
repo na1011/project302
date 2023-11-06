@@ -633,14 +633,18 @@
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+        let first = document.querySelector("#nav-item-info-tab");
+        let second = document.querySelector("#nav-item-details-tab");
+        let third = document.querySelector("#nav-user-info-tab");
+
         function firstStep() {
-            document.querySelector("#nav-item-info-tab").click();
+            first.click();
         }
         function secondStep() {
-            document.querySelector("#nav-item-details-tab").click();
+            second.click();
         }
         function thirdStep() {
-            document.querySelector("#nav-user-info-tab").click();
+            third.click();
         }
     </script>
 </body>
